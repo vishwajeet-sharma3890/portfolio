@@ -1,10 +1,13 @@
-import * as React from "react"
-import * as S from "./styles"
+import * as React from 'react';
+import * as S from './styles';
+import Fade from 'react-reveal/Fade';
 
-export const SectionHeader: React.FC = ({children}) => {
+export const SectionHeader: React.FC = ({ children }) => {
   return (
-    <S.SectionWrapper>
-      {children}
-    </S.SectionWrapper>
-  )
-}
+    <Fade bottom>
+      <S.SectionWrapper>
+        {children}
+      </S.SectionWrapper>
+    </Fade>
+  );
+};

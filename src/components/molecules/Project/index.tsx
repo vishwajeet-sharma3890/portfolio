@@ -3,8 +3,9 @@ import * as S from './styles';
 import { ProjectProps } from './types';
 import { ProjectPicture } from '../../atoms/ProjectPicture';
 import { ProjectDescription } from '../../atoms/ProjectDescription';
+import Fade from 'react-reveal/Fade';
 
-export const Project: React.FC<ProjectProps> = ({ orientation, projectImage, description , index}) => {
+export const Project: React.FC<ProjectProps> = ({ orientation, projectImage, description, index }) => {
 
   return (
     <S.ProjectWrapper>
@@ -12,15 +13,25 @@ export const Project: React.FC<ProjectProps> = ({ orientation, projectImage, des
       {
         orientation === 'left' ?
           <>
-            <ProjectPicture pictureUrl={projectImage} index={index} />
-            <ProjectDescription {...description} />
+            <Fade left>
+              <ProjectPicture pictureUrl={projectImage} index={index} />
+            </Fade>
+            <Fade right>
+              <ProjectDescription {...description} />
+            </Fade>
           </>
           :
           <>
-            <ProjectDescription {...description} />
-            <ProjectPicture pictureUrl={projectImage} index={index} />
+            <Fade left>
+              <ProjectDescription {...description} />
+            </Fade>
+            <Fade right>
+              <ProjectPicture pictureUrl={projectImage} index={index} />
+            </Fade>
           </>
       }
+
+
     </S.ProjectWrapper>
   );
 };

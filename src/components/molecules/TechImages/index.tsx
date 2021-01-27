@@ -51,8 +51,8 @@ export const TechImages: React.FC<TechImagesProps> = ({images}) => {
       {
         images.map((image, index) => {
           return (
-            <S.TechImagesAnimationWrapper opacity={index <= imagesDisplayed.length ? 1 : 0}>
-              <TechImage key={`TechImagesWrapper${index}`} imageUrl={image}/>
+            <S.TechImagesAnimationWrapper key={`TechImagesWrapper${index}`} opacity={index <= imagesDisplayed.length ? 1 : 0}>
+              <TechImage imageUrl={image}/>
             </S.TechImagesAnimationWrapper>
           )
         })
