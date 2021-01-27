@@ -2,6 +2,9 @@ import baseStyled, {ThemedStyledInterface} from "styled-components"
 import * as C from "./constants"
 
 export const defaultTheme = {
+  animation: {
+    ...C.theme.animations,
+  },
   button: {
     height: "auto",
     padding: "18px 64px",

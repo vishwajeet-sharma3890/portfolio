@@ -10,7 +10,8 @@ export const TechSectionImageWrapper = styled.div`
   ${props => `
     height: ${props.theme.body.sections.tech.height.desktop};
     width: ${props.theme.body.sections.tech.width.desktop};
-    
+    display: flex;
+    align-items: center;
     
   `}
 `

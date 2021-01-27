@@ -1,4 +1,6 @@
 // breakpoints
+import { keyframes } from 'styled-components';
+
 export const mediumScreen = 992
 export const smallScreen = 540
 export const xSmallScreen = 320
@@ -41,8 +43,22 @@ export const normalFontWeight = 400
 export const semiBoldFontWeight = 600
 export const boldFontWeight = 700
 
+// Animations
+export const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`
+
 // theme
 export const theme = {
+  animations: {
+    fadeIn
+  },
   backgroundColor: {
     white,
     gray1,

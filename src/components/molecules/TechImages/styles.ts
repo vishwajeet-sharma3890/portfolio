@@ -8,3 +8,11 @@ export const TechImagesWrapper = styled.div`
     grid-gap: 32px;
   `}
 `
+
+export const TechImagesAnimationWrapper = styled.div<{ opacity: number }>`
+  ${props => `
+    opacity: ${props.opacity};
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+  `}
+`

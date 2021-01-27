@@ -3,6 +3,7 @@ import * as S from './styles';
 import { SectionHeader } from '../../atoms/SectionHeader';
 import { ParallaxContainer } from '../../atoms/ParallaxContainer';
 import techbackgroundImage from '../../../images/tech-background.jpg';
+import techAndroid from '../../../images/tech-android.svg';
 import techHTML from '../../../images/tech-html.svg';
 import techCSS from '../../../images/tech-css.svg';
 import techJS from '../../../images/tech-js.svg';
@@ -22,7 +23,7 @@ export const TechSection: React.FC = () => {
         <S.TechSectionOverlay>
           <S.TechSectionImageWrapper>
             <TechImages
-              images={[techHTML, techCSS, techJS, techReact, techPostgres, techNode, techMongo]} />
+              images={[techAndroid, techHTML, techCSS, techJS, techReact, techPostgres, techNode, techMongo]} />
           </S.TechSectionImageWrapper>
         </S.TechSectionOverlay>
       </ParallaxContainer>
