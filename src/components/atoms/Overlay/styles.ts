@@ -8,6 +8,6 @@ export const OverlayWrapper = styled.div<{ backgroundColor: string }>`
     height: 100%;
     width: 100%;
     background: ${props.backgroundColor};
-    opacity: 0.8; 
+    opacity: 0.4; 
   `}
 `

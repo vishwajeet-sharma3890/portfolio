@@ -9,8 +9,14 @@ export const BannerWrapper = styled.div`
   `}
 `;
 
-export const BannerJPGImage = styled.img`
+export const BannerJPGImage = styled.div<{ backgroundImage: string }>`
   object-fit: cover;
   width: 100%;
-  height: 50vh;
+  height: 37vh;
+  background-color:#C0DEED;
+  background: url(${props => props.backgroundImage}) center top repeat-x;
+  animation: ${props => props.theme.animation.cloudAnimation} 20s alternate infinite;
+  -ms-animation: ${props => props.theme.animation.cloudAnimation} 20s alternate infinite;
+  -moz-animation: ${props => props.theme.animation.cloudAnimation} 20s alternate infinite;
+  -webkit-animation: ${props => props.theme.animation.cloudAnimation} 20s alternate infinite;
 `;
