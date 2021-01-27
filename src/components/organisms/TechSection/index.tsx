@@ -11,11 +11,13 @@ import techPostgres from '../../../images/tech-postgres.svg';
 import techNode from '../../../images/tech-node.svg';
 import techMongo from '../../../images/tech-mongo.svg';
 import { TechImages } from '../../molecules/TechImages';
+import { Spacer } from '../../atoms/Spacer';
 
 export const TechSection: React.FC = () => {
   return (
     <S.TechSectionWrapper>
-      <SectionHeader>Tech that I can help you with</SectionHeader>
+      <SectionHeader><span>Tech</span> that I can help <span>you</span> with</SectionHeader>
+      <Spacer size="64px" type="horizontal" />
       <ParallaxContainer backgroundImageUrl={techbackgroundImage}>
         <S.TechSectionOverlay>
           <S.TechSectionImageWrapper>

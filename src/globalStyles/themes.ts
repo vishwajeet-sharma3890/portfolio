@@ -52,6 +52,7 @@ export const defaultTheme = {
         fontWeight: C.theme.fontWeights.semiBold,
       },
     },
+    shadow: C.theme.shadows.shadow3,
   },
   body: {
     description: {
@@ -60,6 +61,47 @@ export const defaultTheme = {
       fontWeight: C.theme.fontWeights.regular,
     },
     sections: {
+      heading: {
+        color: C.theme.fontColors.black,
+        accentColor: C.theme.fontColors.primary,
+        fontSize: C.theme.fontSizes.subHeading,
+        fontWeight: C.theme.fontWeights.bold,
+        textShadow: C.theme.shadows.shadow2,
+      },
+      projects: {
+        background: {
+          background: C.theme.backgroundColor.gradient1,
+          shadow: C.theme.shadows.shadow3,
+        },
+        company: {
+          color: C.theme.fontColors.black,
+          fontSize: C.theme.fontSizes.subTitle,
+          fontWeight: C.theme.fontWeights.semiBold,
+        },
+        image: {
+          height: "450px",
+        },
+        link: {
+          color: C.theme.fontColors.white,
+          fontSize: C.theme.fontSizes.caption,
+          fontWeight: C.theme.fontWeights.bold,
+        },
+        project: {
+          color: C.theme.fontColors.gray1,
+          fontSize: C.theme.fontSizes.superHeading,
+          fontWeight: C.theme.fontWeights.bold,
+        },
+        tech: {
+          color: C.theme.fontColors.gray1,
+          fontSize: C.theme.fontSizes.title,
+          fontWeight: C.theme.fontWeights.regular,
+        },
+        year: {
+          color: C.theme.fontColors.black,
+          fontSize: C.theme.fontSizes.subTitle,
+          fontWeight: C.theme.fontWeights.semiBold,
+        },
+      },
       tech: {
         background: C.theme.backgroundColor.overlay,
         height: {
@@ -72,6 +114,7 @@ export const defaultTheme = {
           pad: "80%",
           mobile: "100%",
         },
+        shadow: C.theme.shadows.shadow3,
       },
     },
   },
@@ -84,6 +127,9 @@ export const defaultTheme = {
     fontSize: {
       ...C.theme.fontSizes,
     }
+  },
+  zIndex: {
+    projectBackground: -10,
   }
 }
 

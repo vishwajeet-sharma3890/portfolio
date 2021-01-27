@@ -1,29 +1,27 @@
-import * as React from "react"
-import * as S from "./styles"
-import {ProfilePicture} from "../../atoms/ProfilePicture"
-import profileImage from "../../../images/profile.svg"
-import {ProfileCard} from "../../organisms/ProfileCard";
-import {Banner} from "../../atoms/Banner";
-import {ProfileIcons} from "../../molecules/ProfileIcons";
-import {Spacer} from "../../atoms/Spacer";
-import {useEffect, useRef, useState} from "react";
-import {ProfileDescription} from "../../atoms/ProfileDescription";
-import {Button} from "../../atoms/Button";
-import { TechSection } from "../../organisms/TechSection";
+import * as React from 'react';
+import { useEffect, useRef, useState } from 'react';
+import * as S from './styles';
+import { ProfileCard } from '../../organisms/ProfileCard';
+import { Banner } from '../../atoms/Banner';
+import { Spacer } from '../../atoms/Spacer';
+import { ProfileDescription } from '../../atoms/ProfileDescription';
+import { Button } from '../../atoms/Button';
+import { TechSection } from '../../organisms/TechSection';
+import { ProjectSection } from '../../organisms/ProjectSection';
 
 export const MainPage: React.FC = () => {
 
   // Refs
-  const profileRef = useRef<HTMLDivElement>(null)
+  const profileRef = useRef<HTMLDivElement>(null);
 
   // States
-  const [bodyMargin, setBodyMargin] = useState(0)
+  const [bodyMargin, setBodyMargin] = useState(0);
 
   useEffect(() => {
     if (profileRef && profileRef.current) {
-      setBodyMargin(profileRef.current.clientHeight - 120)
+      setBodyMargin(profileRef.current.clientHeight - 120);
     }
-  })
+  });
 
   return (
     <S.MainPageWrapper>
@@ -48,6 +46,10 @@ export const MainPage: React.FC = () => {
         <Spacer size="64px" type="horizontal" />
       </ProfileDescription>
       <TechSection />
+      <Spacer size="132px" type="horizontal" />
+      <ProjectSection />
+      <Spacer size="132px" type="horizontal" />
+
     </S.MainPageWrapper>
-  )
-}
+  );
+};

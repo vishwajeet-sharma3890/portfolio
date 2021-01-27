@@ -19,12 +19,14 @@ export const gradient2 = `linear-gradient(to right, ${black}, #505050 100%)`
 
 // Shadows
 export const shadow1 = `0 8px 18px 0 rgba(0, 0, 0, 0.16)`
+export const shadow2 = `0 3px 6px rgba(0, 0, 0, 0.2)`
+export const shadow3 = `0 0 12px rgba(0, 0, 0, 0.2)`
 
 // Typography
 export const baseFontFamily = "montserrat"
 
 // font sizes
-export const fontSizeSuperHeading = "40px"
+export const fontSizeSuperHeading = "32px"
 export const fontSizeHeading = "24px"
 export const fontSizeSubHeading = "20px"
 export const fontSizeTitle = "18px"
@@ -57,6 +59,8 @@ export const theme = {
   },
   fontColors: {
     black,
+    primary,
+    gray1,
     gray2,
     white,
   },
@@ -67,7 +71,7 @@ export const theme = {
     paragraph2: fontSizeParagraph2, // 13px
     subHeading: fontSizeSubHeading, // 20px
     subTitle: fontSizeSubTitle, // 16px
-    superHeading: fontSizeSuperHeading, // 40px
+    superHeading: fontSizeSuperHeading, // 32px
     title: fontSizeTitle, // 18px
   },
   fontWeights: {
@@ -77,5 +81,7 @@ export const theme = {
   },
   shadows: {
     shadow1,
+    shadow2,
+    shadow3,
   },
 }

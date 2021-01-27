@@ -21,5 +21,8 @@ export const TechSectionOverlay = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    -moz-box-shadow: inset ${props.theme.body.sections.tech.shadow};
+    -webkit-box-shadow: inset ${props.theme.body.sections.tech.shadow};
+    box-shadow: inset ${props.theme.body.sections.tech.shadow};
   `}
 `

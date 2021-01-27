@@ -10,10 +10,10 @@ export const ProfileAttributes: React.FC<ProfileAttributesProps> = ({attributes}
       {
         attributes.map((attribute, index) => {
           return (
-            <>
-              <ProfileAttribute key={`ProfileAttributesWrapper${index}`} {...attribute} />
+            <div key={`ProfileAttributesWrapper ${attribute.value} ${index}`}>
+              <ProfileAttribute {...attribute} />
               {index < attributes.length -1 && <Spacer size="16px" type="horizontal" />}
-            </>
+            </div>
           )
         })
       }
