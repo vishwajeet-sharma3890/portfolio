@@ -10,6 +10,7 @@ import { Spacer } from '../../atoms/Spacer';
 
 const projects: ProjectProps[] = [
   {
+    index: 0,
     description: {
       year: "2020",
       company: "Buyceps India Pty Ltd",
@@ -21,6 +22,7 @@ const projects: ProjectProps[] = [
     orientation: "left",
   },
   {
+    index: 1,
     description: {
       year: "2018",
       company: "MillionGenie Pty Ltd",
@@ -32,6 +34,7 @@ const projects: ProjectProps[] = [
     orientation: "right",
   },
   {
+    index: 2,
     description: {
       year: "2017",
       company: "MillionGenie Pty Ltd",

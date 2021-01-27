@@ -4,20 +4,21 @@ import { ProjectProps } from './types';
 import { ProjectPicture } from '../../atoms/ProjectPicture';
 import { ProjectDescription } from '../../atoms/ProjectDescription';
 
-export const Project: React.FC<ProjectProps> = ({ orientation, projectImage, description }) => {
+export const Project: React.FC<ProjectProps> = ({ orientation, projectImage, description , index}) => {
+
   return (
     <S.ProjectWrapper>
       <S.ProjectBackground orientation={orientation} />
       {
-        orientation === "left" ?
+        orientation === 'left' ?
           <>
-            <ProjectPicture pictureUrl={projectImage} />
+            <ProjectPicture pictureUrl={projectImage} index={index} />
             <ProjectDescription {...description} />
           </>
           :
           <>
             <ProjectDescription {...description} />
-            <ProjectPicture pictureUrl={projectImage} />
+            <ProjectPicture pictureUrl={projectImage} index={index} />
           </>
       }
     </S.ProjectWrapper>

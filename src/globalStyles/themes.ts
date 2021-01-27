@@ -80,6 +80,9 @@ export const defaultTheme = {
         },
         image: {
           height: "450px",
+          shadow: C.theme.shadows.shadow1,
+          shadowHover: C.theme.shadows.shadow4,
+          width: "350px",
         },
         link: {
           color: C.theme.fontColors.white,

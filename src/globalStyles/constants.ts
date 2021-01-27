@@ -21,6 +21,7 @@ export const gradient2 = `linear-gradient(to right, ${black}, #505050 100%)`
 export const shadow1 = `0 8px 18px 0 rgba(0, 0, 0, 0.16)`
 export const shadow2 = `0 3px 6px rgba(0, 0, 0, 0.2)`
 export const shadow3 = `0 0 12px rgba(0, 0, 0, 0.2)`
+export const shadow4 = `10px 20px 32px 1px rgba(0, 0, 0, 0.26)`
 
 // Typography
 export const baseFontFamily = "montserrat"
@@ -83,5 +84,6 @@ export const theme = {
     shadow1,
     shadow2,
     shadow3,
+    shadow4,
   },
 }

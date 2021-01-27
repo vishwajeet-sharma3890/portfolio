@@ -6,4 +6,5 @@ export interface ProjectProps {
   projectImage: string
   description: ProjectDescriptionProps
   orientation: ProjectOrientation
+  index: number
 }
