@@ -22,6 +22,13 @@ export const defaultTheme = {
       shadow: C.theme.shadows.shadow1,
       width: "auto",
     },
+    reviewCard: {
+      background: C.theme.backgroundColor.white,
+      height: "auto",
+      padding: "24px",
+      shadow: C.theme.shadows.shadow1,
+      width: "auto",
+    },
   },
   banner: {
     profile: {
@@ -126,6 +133,49 @@ export const defaultTheme = {
         },
         shadow: C.theme.shadows.shadow3,
       },
+      review: {
+        card: {
+          overlay: {
+            top: {
+              size: "118px",
+            },
+            bottom: {
+              size: "42px",
+            },
+          },
+          profile: {
+            name: {
+              color: C.theme.fontColors.black,
+              fontSize: C.theme.fontSizes.subTitle,
+              fontWeight: C.theme.fontWeights.semiBold,
+            },
+            position: {
+              color: C.theme.fontColors.gray2,
+              fontSize: C.theme.fontSizes.paragraph2,
+              fontWeight: C.theme.fontWeights.regular,
+            },
+            company: {
+              color: C.theme.fontColors.gray2,
+              fontSize: C.theme.fontSizes.paragraph2,
+              fontWeight: C.theme.fontWeights.regular,
+            },
+          },
+          review: {
+            title: {
+              color: C.theme.fontColors.black,
+              fontSize: C.theme.fontSizes.title,
+              fontWeight: C.theme.fontWeights.semiBold,
+            },
+            description: {
+              color: C.theme.fontColors.black,
+              fontSize: C.theme.fontSizes.paragraph1,
+              fontWeight: C.theme.fontWeights.regular,
+            },
+          },
+          maxWidth: "300px",
+        },
+
+      },
       tech: {
         background: C.theme.backgroundColor.overlay,
         height: {
@@ -154,6 +204,10 @@ export const defaultTheme = {
   },
   zIndex: {
     projectBackground: -10,
+    review: {
+      overlay: 0,
+      content: 1,
+    }
   }
 }
 

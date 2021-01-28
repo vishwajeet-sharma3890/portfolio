@@ -9,6 +9,7 @@ import { Button } from '../../atoms/Button';
 import { TechSection } from '../../organisms/TechSection';
 import { ProjectSection } from '../../organisms/ProjectSection';
 import { QuoteSection } from '../../organisms/QuoteSection';
+import { ReviewSection } from '../../organisms/ReviewSection';
 
 export const MainPage: React.FC = () => {
 
@@ -51,6 +52,8 @@ export const MainPage: React.FC = () => {
       <ProjectSection />
       <Spacer size="132px" type="horizontal" />
       <QuoteSection />
+      <Spacer size="132px" type="horizontal" />
+      <ReviewSection />
     </S.MainPageWrapper>
   );
 };

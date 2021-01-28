@@ -1,9 +1,10 @@
 import * as React from "react"
 import * as S from "./styles"
+import { CardProps } from './types';
 
-export const Card: React.FC = ({children}) => {
+export const Card: React.FC<CardProps> = ({cardStyle, children}) => {
   return (
-    <S.CardWrapper>
+    <S.CardWrapper cardStyle={cardStyle}>
       {children}
     </S.CardWrapper>
   )

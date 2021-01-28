@@ -44,7 +44,7 @@ const icons: IconButtonProps[] = [
 
 export const ProfileCard: React.FC = () => {
   return (
-    <Card>
+    <Card cardStyle="profileCard">
       <S.ProfileCardWrapper>
         <ProfilePicture pictureUrl={profileImage}/>
         <div>
