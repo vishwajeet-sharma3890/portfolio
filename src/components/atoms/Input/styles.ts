@@ -1,13 +1,18 @@
-import {styled} from "../../../globalStyles";
-import { InputType } from './types';
+import { styled } from '../../../globalStyles';
 
-export const InputWrapper = styled.div<{ inputType: InputType }>`
+export const InputWrapper = styled.div<{ isActive?: boolean }>`
   ${props => `
   
-    background: ${props.theme.input.background};
+    background-image: ${props.isActive ? props.theme.input.hoverBackground : props.theme.input.background};
     width: ${props.theme.input.width};
     padding: 2px;
     margin: auto;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
+    
+    :hover {
+      background-image: ${props.theme.input.hoverBackground};
+    }
   
     input {
       font-family: ${props.theme.typography.baseFontFamily};
@@ -28,24 +33,5 @@ export const InputWrapper = styled.div<{ inputType: InputType }>`
       }
     }
     
-    textarea {
-      font-family: ${props.theme.typography.baseFontFamily};
-      height: ${props.theme.textarea.height};
-      width: ${props.theme.textarea.innerWidth};
-      color: ${props.theme.textarea.color};
-      font-size: ${props.theme.textarea.fontSize};
-      font-weight: ${props.theme.textarea.fontWeight};
-      padding: 8px 16px;
-      outline: none;
-      border: none;
-      
-      ::placeholder {
-        font-family: Montserrat;
-        color: ${props.theme.textarea.placeholder.color};
-        font-size: ${props.theme.textarea.placeholder.fontSize};
-        font-weight: ${props.theme.textarea.placeholder.fontWeight};
-      }
-    }
-    
   `}
-`
+`;

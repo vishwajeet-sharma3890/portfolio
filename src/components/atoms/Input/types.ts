@@ -1,7 +1,7 @@
-export type InputType = "input" | "textarea"
+import { ChangeEventHandler } from 'react';
 
 export interface InputProps {
   placeholder: string
-  onChange:() => void
-  inputType?: InputType
+  value: string
+  onChange: ChangeEventHandler<HTMLInputElement>
 }
