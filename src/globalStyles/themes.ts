@@ -108,6 +108,24 @@ export const defaultTheme = {
           fontWeight: C.theme.fontWeights.semiBold,
         },
       },
+      quote: {
+        background: C.theme.backgroundColor.darkoverlay,
+        color: C.theme.fontColors.white,
+        fontFamily: "Lucida Console",
+        fontSize: C.theme.fontSizes.heading,
+        fontWeight: C.theme.fontWeights.regular,
+        height: {
+          desktop: "250px",
+          pad: "220px",
+          mobile: "120px",
+        },
+        width: {
+          desktop: "80%",
+          pad: "80%",
+          mobile: "90%",
+        },
+        shadow: C.theme.shadows.shadow3,
+      },
       tech: {
         background: C.theme.backgroundColor.overlay,
         height: {

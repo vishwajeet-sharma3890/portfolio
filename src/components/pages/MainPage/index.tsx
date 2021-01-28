@@ -8,6 +8,7 @@ import { ProfileDescription } from '../../atoms/ProfileDescription';
 import { Button } from '../../atoms/Button';
 import { TechSection } from '../../organisms/TechSection';
 import { ProjectSection } from '../../organisms/ProjectSection';
+import { QuoteSection } from '../../organisms/QuoteSection';
 
 export const MainPage: React.FC = () => {
 
@@ -19,7 +20,7 @@ export const MainPage: React.FC = () => {
 
   useEffect(() => {
     if (profileRef && profileRef.current) {
-      setBodyMargin(profileRef.current.clientHeight - 120);
+      setBodyMargin(profileRef.current.clientHeight - 90);
     }
   });
 
@@ -49,7 +50,7 @@ export const MainPage: React.FC = () => {
       <Spacer size="132px" type="horizontal" />
       <ProjectSection />
       <Spacer size="132px" type="horizontal" />
-
+      <QuoteSection />
     </S.MainPageWrapper>
   );
 };

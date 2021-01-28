@@ -14,6 +14,7 @@ const white = "#fff"
 const gray1 = "#EAEAEA";
 const gray2 = "#707070";
 const overlay = "rgba(255,255,255, 0.8)";
+const darkoverlay = "rgba(0,0,0, 0.8)";
 
 // Gradients
 export const gradient1 = `linear-gradient(-45deg, ${primary}, ${secondary} 100%)`
@@ -76,6 +77,7 @@ export const theme = {
     gradient1,
     gradient2,
     overlay,
+    darkoverlay,
   },
   colors: {
     primary,
