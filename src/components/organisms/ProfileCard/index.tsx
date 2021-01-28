@@ -27,7 +27,7 @@ const attributes: ProfileAttributeProps[] = [
   },
 ]
 
-const icons: IconButtonProps[] = [
+export const icons: IconButtonProps[] = [
   {
     icon: faGithub,
     link: "https://github.com/buyceps-vishu",

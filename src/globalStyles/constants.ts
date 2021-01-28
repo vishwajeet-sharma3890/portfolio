@@ -26,6 +26,9 @@ export const shadow2 = `0 3px 6px rgba(0, 0, 0, 0.2)`
 export const shadow3 = `0 0 12px rgba(0, 0, 0, 0.2)`
 export const shadow4 = `10px 20px 32px 1px rgba(0, 0, 0, 0.26)`
 
+// Borders
+export const border1 = `1px solid ${gray1}`
+
 // Typography
 export const baseFontFamily = "montserrat"
 
@@ -78,6 +81,10 @@ export const theme = {
     gradient2,
     overlay,
     darkoverlay,
+    black,
+  },
+  borders: {
+    border1,
   },
   colors: {
     primary,

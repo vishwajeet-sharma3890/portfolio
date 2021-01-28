@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import * as S from './styles';
-import { ProfileCard } from '../../organisms/ProfileCard';
+import { icons, ProfileCard } from '../../organisms/ProfileCard';
 import { Banner } from '../../atoms/Banner';
 import { Spacer } from '../../atoms/Spacer';
 import { ProfileDescription } from '../../atoms/ProfileDescription';
@@ -11,6 +11,8 @@ import { ProjectSection } from '../../organisms/ProjectSection';
 import { QuoteSection } from '../../organisms/QuoteSection';
 import { ReviewSection } from '../../organisms/ReviewSection';
 import { ContactSection } from '../../organisms/ContactSection';
+import { ProfileIcons } from '../../molecules/ProfileIcons';
+import { theme } from '../../../globalStyles/constants';
 
 export const MainPage: React.FC = () => {
 
@@ -51,12 +53,17 @@ export const MainPage: React.FC = () => {
       <TechSection />
       <Spacer size="132px" type="horizontal" />
       <ProjectSection />
-      <Spacer size="132px" type="horizontal" />
       <QuoteSection />
       <Spacer size="132px" type="horizontal" />
       <ReviewSection />
       <Spacer size="98px" type="horizontal" />
       <ContactSection />
+      <Spacer size="98px" type="horizontal" />
+      <footer>
+        <ProfileIcons icons={icons} defaultColor={theme.colors.white} />
+        <Spacer size="32px" type="horizontal" />
+        Copyright © {new Date().getFullYear()} Vish - All Rights Reserved.
+      </footer>
     </S.MainPageWrapper>
   );
 };

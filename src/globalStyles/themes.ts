@@ -5,14 +5,52 @@ export const defaultTheme = {
   animation: {
     ...C.theme.animations,
   },
+  input: {
+    background: C.theme.backgroundColor.gradient1,
+    height: "32px",
+    width: "312px",
+    innerWidth: "280px",
+    color: C.theme.fontColors.black,
+    fontSize: C.theme.fontSizes.paragraph1,
+    fontWeight: C.theme.fontWeights.semiBold,
+    placeholder: {
+      color: C.theme.fontColors.gray2,
+      fontSize: C.theme.fontSizes.caption,
+      fontWeight: C.theme.fontWeights.semiBold,
+    },
+  },
+  textarea: {
+    height: "64px",
+    width: "312px",
+    innerWidth: "280px",
+    color: C.theme.fontColors.black,
+    fontSize: C.theme.fontSizes.paragraph1,
+    fontWeight: C.theme.fontWeights.semiBold,
+    placeholder: {
+      color: C.theme.fontColors.gray2,
+      fontSize: C.theme.fontSizes.caption,
+      fontWeight: C.theme.fontWeights.semiBold,
+    },
+  },
   button: {
-    height: "auto",
-    padding: "18px 64px",
-    background: C.theme.backgroundColor.gradient2,
-    shadow: C.theme.shadows.shadow1,
-    color: C.theme.fontColors.white,
-    fontSize: C.theme.fontSizes.subTitle,
-    fontWeight: C.theme.fontWeights.bold,
+    default: {
+      height: "auto",
+      padding: "18px 64px",
+      background: C.theme.backgroundColor.gradient2,
+      shadow: C.theme.shadows.shadow1,
+      color: C.theme.fontColors.white,
+      fontSize: C.theme.fontSizes.subTitle,
+      fontWeight: C.theme.fontWeights.bold,
+    },
+    contact: {
+      height: "auto",
+      padding: "12px 104px",
+      background: C.theme.backgroundColor.gradient1,
+      shadow: C.theme.shadows.shadow1,
+      color: C.theme.fontColors.white,
+      fontSize: C.theme.fontSizes.paragraph2,
+      fontWeight: C.theme.fontWeights.bold,
+    }
   },
   card: {
     profileCard: {
@@ -193,6 +231,12 @@ export const defaultTheme = {
         shadow: C.theme.shadows.shadow3,
       },
     },
+  },
+  footer: {
+    color: C.theme.fontColors.white,
+    fontSize: C.theme.fontSizes.caption,
+    fontWeight: C.theme.fontWeights.regular,
+    background: C.theme.backgroundColor.black,
   },
   divider: {
     background: C.theme.backgroundColor.gray1,
