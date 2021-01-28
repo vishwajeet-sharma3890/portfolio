@@ -19,6 +19,7 @@ const darkoverlay = "rgba(0,0,0, 0.8)";
 // Gradients
 export const gradient1 = `linear-gradient(-45deg, ${primary}, ${secondary} 100%)`
 export const gradient2 = `linear-gradient(to right, ${black}, #505050 100%)`
+export const gradient3 = `linear-gradient(-45deg, ${primary}80, ${secondary}80 60%)`
 
 // Shadows
 export const shadow1 = `0 8px 18px 0 rgba(0, 0, 0, 0.16)`
@@ -68,17 +69,26 @@ export const cloudAnimation = keyframes`
   };
 `
 
+export const buttonRipple = keyframes`
+  to {
+    transform: scale(4);
+    opacity: 0;
+  };
+`
+
 // theme
 export const theme = {
   animations: {
     fadeIn,
     cloudAnimation,
+    buttonRipple,
   },
   backgroundColor: {
     white,
     gray1,
     gradient1,
     gradient2,
+    gradient3,
     overlay,
     darkoverlay,
     black,
