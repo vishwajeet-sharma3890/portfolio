@@ -13,7 +13,7 @@ export const QuoteSection: React.FC = () => {
       <ParallaxContainer backgroundImageUrl={quoteBackgroundImage}>
         <S.QuoteSectionOverlay>
           <S.QuoteSectionTextWrapper>
-            "I wanted you to know that it doesn't matter how hard you work, that I'm willing to work harder than you." -
+            "I want you to know that it doesn't matter how hard you work, that I'm willing to work harder than you." -
             Kobe Bryant to Jay Williams
           </S.QuoteSectionTextWrapper>
         </S.QuoteSectionOverlay>

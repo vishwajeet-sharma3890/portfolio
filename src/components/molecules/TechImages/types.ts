@@ -1,3 +1,5 @@
+import { TechImageProps } from '../../atoms/TechImage/types';
+
 export interface TechImagesProps {
-  images: string[]
+  images: TechImageProps[]
 }

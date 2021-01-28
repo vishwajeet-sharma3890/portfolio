@@ -3,12 +3,13 @@ import * as S from "./styles"
 import {TechImagesProps} from "./types"
 import {TechImage} from "../../atoms/TechImage";
 import { useLayoutEffect, useRef, useState } from 'react';
+import { TechImageProps } from '../../atoms/TechImage/types';
 
 export const TechImages: React.FC<TechImagesProps> = ({images}) => {
 
   // TODO : Change this logic
   // States
-  const [imagesDisplayed, setImagesDisplayed] = useState<string[]>([])
+  const [imagesDisplayed, setImagesDisplayed] = useState<TechImageProps[]>([])
 
   // Ref
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -52,7 +53,7 @@ export const TechImages: React.FC<TechImagesProps> = ({images}) => {
         images.map((image, index) => {
           return (
             <S.TechImagesAnimationWrapper key={`TechImagesWrapper${index}`} opacity={index <= imagesDisplayed.length ? 1 : 0}>
-              <TechImage imageUrl={image}/>
+              <TechImage {...image}/>
             </S.TechImagesAnimationWrapper>
           )
         })
