@@ -4,6 +4,7 @@ export const ReviewCardWrapper = styled.div`
   ${props => `
     position: relative;
     max-width: ${props.theme.body.sections.review.card.maxWidth};
+    margin: ${props.theme.body.sections.review.card.margin};
   `}
 `
 

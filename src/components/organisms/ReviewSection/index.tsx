@@ -6,6 +6,7 @@ import { ReviewCardProps } from '../../molecules/ReviewCard/types';
 import { Spacer } from '../../atoms/Spacer';
 import sampleReviewerPicture from '../../../images/samplereviewerpic.svg';
 import Carousel from 'react-multi-carousel';
+import Fade from 'react-reveal/Fade';
 import 'react-multi-carousel/lib/styles.css';
 
 const responsive = {
@@ -14,7 +15,7 @@ const responsive = {
       max: 3000,
       min: 1024,
     },
-    items: 3,
+    items: 2,
     partialVisibilityGutter: 40,
   },
   mobile: {
@@ -23,14 +24,14 @@ const responsive = {
       min: 0,
     },
     items: 1,
-    partialVisibilityGutter: 30,
+    partialVisibilityGutter: 10,
   },
   tablet: {
     breakpoint: {
       max: 1024,
       min: 764,
     },
-    items: 2,
+    items: 1,
     partialVisibilityGutter: 30,
   },
 };
@@ -85,17 +86,24 @@ const reviews: ReviewCardProps[] = [
 export const ReviewSection: React.FC = () => {
   return (
     <S.ReviewSectionWrapper>
-      <SectionHeader>Hear it from the <span>people</span> I <span>worked</span> with</SectionHeader>
-      <Spacer size="64px" type="horizontal" />
-      <Carousel customLeftArrow={<div />}
-                customRightArrow={<div />} swipeable minimumTouchDrag={80} draggable infinite autoPlaySpeed={3000}
-                centerMode responsive={responsive}>
-        {
-          reviews.map((review, index) => (
-            <ReviewCard key={`ReviewSectionWrapper${index}`} {...review} />
-          ))
-        }
-      </Carousel>
+      <SectionHeader><span>Hear</span> it from the <span>people</span> I <span>worked</span> with</SectionHeader>
+      <Spacer size="48px" type="horizontal" />
+      <S.ReviewSectionContentWrapper>
+        <S.ReviewSectionBackgroundWrapper>
+          <S.ReviewSectionBackground />
+        </S.ReviewSectionBackgroundWrapper>
+        <Fade bottom>
+          <Carousel customLeftArrow={<div />}
+                    customRightArrow={<div />} swipeable minimumTouchDrag={80} infinite autoPlaySpeed={3000}
+                    centerMode responsive={responsive}>
+            {
+              reviews.map((review, index) => (
+                <ReviewCard key={`ReviewSectionWrapper${index}`} {...review} />
+              ))
+            }
+          </Carousel>
+        </Fade>
+      </S.ReviewSectionContentWrapper>
     </S.ReviewSectionWrapper>
   );
 };

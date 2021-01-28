@@ -134,6 +134,7 @@ export const defaultTheme = {
         shadow: C.theme.shadows.shadow3,
       },
       review: {
+        background: C.theme.backgroundColor.gradient1,
         card: {
           overlay: {
             top: {
@@ -173,6 +174,7 @@ export const defaultTheme = {
             },
           },
           maxWidth: "300px",
+          margin: "32px 0",
         },
 
       },

@@ -10,6 +10,7 @@ import { TechSection } from '../../organisms/TechSection';
 import { ProjectSection } from '../../organisms/ProjectSection';
 import { QuoteSection } from '../../organisms/QuoteSection';
 import { ReviewSection } from '../../organisms/ReviewSection';
+import { ContactSection } from '../../organisms/ContactSection';
 
 export const MainPage: React.FC = () => {
 
@@ -54,6 +55,8 @@ export const MainPage: React.FC = () => {
       <QuoteSection />
       <Spacer size="132px" type="horizontal" />
       <ReviewSection />
+      <Spacer size="98px" type="horizontal" />
+      <ContactSection />
     </S.MainPageWrapper>
   );
 };
