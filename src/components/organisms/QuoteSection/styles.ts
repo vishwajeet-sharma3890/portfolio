@@ -1,4 +1,5 @@
 import {styled} from "../../../globalStyles";
+import { ScreenSize } from '../../../globalStyles/media';
 
 export const QuoteSectionWrapper = styled.div`
   ${props => `
@@ -6,10 +7,11 @@ export const QuoteSectionWrapper = styled.div`
   `}
 `
 
-export const QuoteSectionTextWrapper = styled.div`
+export const QuoteSectionTextWrapper = styled.div<{ screenSize: ScreenSize }>`
   ${props => `
-    height: ${props.theme.body.sections.quote.height.desktop};
-    width: ${props.theme.body.sections.quote.width.desktop};
+    height: ${props.theme.body.sections.quote.height[props.screenSize]};
+    width: ${props.theme.body.sections.quote.width[props.screenSize]};
+    padding: 32px 0;
     display: flex;
     align-items: center;
     font-family: ${props.theme.body.sections.quote.fontFamily};
