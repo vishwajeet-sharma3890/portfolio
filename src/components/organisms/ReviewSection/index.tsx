@@ -87,7 +87,6 @@ export const ReviewSection: React.FC = () => {
   return (
     <S.ReviewSectionWrapper>
       <SectionHeader><span>Hear</span> it from the <span>people</span> I <span>worked</span> with</SectionHeader>
-      <Spacer size="48px" type="horizontal" />
       <S.ReviewSectionContentWrapper>
         <S.ReviewSectionBackgroundWrapper>
           <S.ReviewSectionBackground />

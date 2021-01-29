@@ -1,4 +1,5 @@
 import {styled} from "../../../globalStyles";
+import { ScreenSize } from '../../../globalStyles/media';
 
 export const TechSectionWrapper = styled.div`
   ${props => `
@@ -6,10 +7,11 @@ export const TechSectionWrapper = styled.div`
   `}
 `
 
-export const TechSectionImageWrapper = styled.div`
+export const TechSectionImageWrapper = styled.div<{ screenSize: ScreenSize }>`
   ${props => `
-    height: ${props.theme.body.sections.tech.height.desktop};
-    width: ${props.theme.body.sections.tech.width.desktop};
+    height: ${props.theme.body.sections.tech.height[props.screenSize]};
+    width: ${props.theme.body.sections.tech.width[props.screenSize]};
+    padding: 32px 16px;
     display: flex;
     align-items: center;
     

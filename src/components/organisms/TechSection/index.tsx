@@ -14,6 +14,7 @@ import techMongo from '../../../images/tech-mongo.svg';
 import { TechImages } from '../../molecules/TechImages';
 import { Spacer } from '../../atoms/Spacer';
 import { TechImageProps } from '../../atoms/TechImage/types';
+import { getScreenSize, ScreenSize } from '../../../globalStyles/media';
 
 const techImages: TechImageProps[] = [
   {
@@ -51,13 +52,16 @@ const techImages: TechImageProps[] = [
 ]
 
 export const TechSection: React.FC = () => {
+
+  // Media query
+  const screenSize: ScreenSize = getScreenSize()
+
   return (
     <S.TechSectionWrapper>
       <SectionHeader><span>Tech</span> that I can help <span>you</span> with</SectionHeader>
-      <Spacer size="64px" type="horizontal" />
       <ParallaxContainer backgroundImageUrl={techbackgroundImage}>
         <S.TechSectionOverlay>
-          <S.TechSectionImageWrapper>
+          <S.TechSectionImageWrapper screenSize={screenSize}>
             <TechImages
               images={techImages} />
           </S.TechSectionImageWrapper>

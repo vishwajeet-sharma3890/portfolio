@@ -27,7 +27,6 @@ export const ContactSection: React.FC = () => {
         <Fade bottom>
           <Card cardStyle="profileCard">
             <SectionHeader>Let's <span>connect</span> and <span>build</span><br /> something <span>beautiful</span> together</SectionHeader>
-            <Spacer size="32px" type="horizontal" />
             <ContactForm />
           </Card>
         </Fade>

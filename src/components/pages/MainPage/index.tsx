@@ -23,14 +23,21 @@ export const MainPage: React.FC = () => {
   // States
   const [bodyMargin, setBodyMargin] = useState(0);
 
+  // Media query
+  const screenSize: ScreenSize = getScreenSize()
+  const isMobileScreen = screenSize.includes("mobile")
+
   useEffect(() => {
     if (profileRef && profileRef.current) {
-      setBodyMargin(profileRef.current.clientHeight - 90);
+      setBodyMargin(profileRef.current.clientHeight - (isMobileScreen ? 120 : 90));
     }
   });
 
-  // Media query
-  const screenSize: ScreenSize = getScreenSize()
+  // Section spacer according to screenSize
+  let sectionSpacer = 64
+  if (isMobileScreen) {
+    sectionSpacer = 32
+  }
 
   return (
     <S.MainPageWrapper>
@@ -51,23 +58,23 @@ export const MainPage: React.FC = () => {
         worked on a variety of technologies and projects. I love a challenge and I am quick to adapt and<br />
         evolve, see the bigger picture and solve problems for customers.<br />
       </ProfileDescription>
-      <Spacer size="64px" type="horizontal" />
+      <Spacer size={`${sectionSpacer}px`} type="horizontal" />
       <S.DownloadButtonContainer>
         <Button onClick={() => ''}>Download Resume</Button>
       </S.DownloadButtonContainer>
-      <Spacer size="64px" type="horizontal" />
+      <Spacer size={`${sectionSpacer*2}px`} type="horizontal" />
       <TechSection />
-      <Spacer size="132px" type="horizontal" />
+      <Spacer size={`${sectionSpacer*2}px`} type="horizontal" />
       <ProjectSection />
       <QuoteSection />
-      <Spacer size="132px" type="horizontal" />
+      <Spacer size={`${sectionSpacer*2}px`} type="horizontal" />
       <ReviewSection />
-      <Spacer size="98px" type="horizontal" />
+      <Spacer size={`${sectionSpacer}px`} type="horizontal" />
       <ContactSection />
-      <Spacer size="98px" type="horizontal" />
+      <Spacer size={`${sectionSpacer}px`} type="horizontal" />
       <footer>
         <ProfileIcons icons={icons} defaultColor={theme.colors.white} />
-        <Spacer size="32px" type="horizontal" />
+        <Spacer size={`${sectionSpacer+32}px`} type="horizontal" />
         Copyright © {new Date().getFullYear()} Vish - All Rights Reserved.
       </footer>
     </S.MainPageWrapper>

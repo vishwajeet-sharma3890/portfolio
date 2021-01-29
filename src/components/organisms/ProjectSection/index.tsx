@@ -51,7 +51,6 @@ export const ProjectSection: React.FC = () => {
   return (
     <S.ProjectSectionWrapper>
       <SectionHeader>Here is some of that <span>tech</span> in <span>action</span></SectionHeader>
-      <Spacer size="64px" type="horizontal" />
       {
         projects.map((project, index) => (
           <div key={`ProjectSectionWrapper${index}`}>

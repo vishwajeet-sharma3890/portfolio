@@ -255,13 +255,19 @@ export const defaultTheme = {
       tech: {
         background: C.theme.backgroundColor.overlay,
         height: {
+          largedesktop: "420px",
           desktop: "420px",
-          pad: "320px",
-          mobile: "220px",
+          largetab: "320px",
+          tab: "320px",
+          largemobile: "220px",
+          mobile: "100%",
         },
         width: {
+          largedesktop: "50%",
           desktop: "50%",
-          pad: "80%",
+          largetab: "80%",
+          tab: "80%",
+          largemobile: "100%",
           mobile: "100%",
         },
         shadow: C.theme.shadows.shadow3,

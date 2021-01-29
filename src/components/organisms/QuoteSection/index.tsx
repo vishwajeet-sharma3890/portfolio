@@ -9,7 +9,6 @@ export const QuoteSection: React.FC = () => {
   return (
     <S.QuoteSectionWrapper>
       <SectionHeader>A quote from my idol <span>Kobe Bryant</span> that defines who I am</SectionHeader>
-      <Spacer size="64px" type="horizontal" />
       <ParallaxContainer backgroundImageUrl={quoteBackgroundImage}>
         <S.QuoteSectionOverlay>
           <S.QuoteSectionTextWrapper>
