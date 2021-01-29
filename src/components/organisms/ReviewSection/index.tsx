@@ -3,38 +3,12 @@ import * as S from './styles';
 import { SectionHeader } from '../../atoms/SectionHeader';
 import { ReviewCard } from '../../molecules/ReviewCard';
 import { ReviewCardProps } from '../../molecules/ReviewCard/types';
-import { Spacer } from '../../atoms/Spacer';
 import sampleReviewerPicture from '../../../images/samplereviewerpic.svg';
-import Carousel from 'react-multi-carousel';
-import Fade from 'react-reveal/Fade';
+import Carousel, { arrowsPlugin, autoplayPlugin, slidesToShowPlugin } from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
 import 'react-multi-carousel/lib/styles.css';
-
-const responsive = {
-  desktop: {
-    breakpoint: {
-      max: 3000,
-      min: 1024,
-    },
-    items: 2,
-    partialVisibilityGutter: 40,
-  },
-  mobile: {
-    breakpoint: {
-      max: 764,
-      min: 0,
-    },
-    items: 1,
-    partialVisibilityGutter: 10,
-  },
-  tablet: {
-    breakpoint: {
-      max: 1024,
-      min: 764,
-    },
-    items: 1,
-    partialVisibilityGutter: 30,
-  },
-};
+import { getScreenSize, isMobileScreen, ScreenSize } from '../../../globalStyles/media';
+import { CarouselButton } from '../../atoms/CarouselButton';
 
 const reviews: ReviewCardProps[] = [
   {
@@ -84,24 +58,50 @@ const reviews: ReviewCardProps[] = [
 ];
 
 export const ReviewSection: React.FC = () => {
+
+  // Media query
+  const screenSize: ScreenSize = getScreenSize();
+  const mobileScreen = isMobileScreen(screenSize);
+
   return (
     <S.ReviewSectionWrapper>
       <SectionHeader><span>Hear</span> it from the <span>people</span> I <span>worked</span> with</SectionHeader>
       <S.ReviewSectionContentWrapper>
-        <S.ReviewSectionBackgroundWrapper>
-          <S.ReviewSectionBackground />
-        </S.ReviewSectionBackgroundWrapper>
-        <Fade bottom>
-          <Carousel customLeftArrow={<div />}
-                    customRightArrow={<div />} swipeable minimumTouchDrag={80} infinite autoPlaySpeed={3000}
-                    centerMode responsive={responsive}>
+        <Carousel
+          plugins={[
+            'centered',
+            'infinite',
             {
-              reviews.map((review, index) => (
-                <ReviewCard key={`ReviewSectionWrapper${index}`} {...review} />
-              ))
-            }
-          </Carousel>
-        </Fade>
+              resolve: arrowsPlugin,
+              options: {
+                arrowLeft: <CarouselButton carouselButtonPosition="left" />,
+                arrowLeftDisabled: <CarouselButton disabled carouselButtonPosition="left" />,
+                arrowRight: <CarouselButton carouselButtonPosition="right" />,
+                arrowRightDisabled: <CarouselButton disabled carouselButtonPosition="right" />,
+                addArrowClickHandler: false,
+              },
+            },
+            {
+              resolve: autoplayPlugin,
+              options: {
+                interval: 3000,
+              },
+            },
+            {
+              resolve: slidesToShowPlugin,
+              options: {
+                numberOfSlides: mobileScreen ? 1 : 2,
+              },
+            },
+          ]}
+          animationSpeed={1000}
+        >
+          {
+            reviews.map((review, index) => (
+              <ReviewCard key={`ReviewSectionWrapper${index}`} {...review} />
+            ))
+          }
+        </Carousel>
       </S.ReviewSectionContentWrapper>
     </S.ReviewSectionWrapper>
   );

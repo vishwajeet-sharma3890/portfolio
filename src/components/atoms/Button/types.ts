@@ -1,4 +1,4 @@
-export type ButtonStyle = "default" | "contact"
+export type ButtonStyle = "default" | "contact" | "carousel"
 
 export interface ButtonRipplePosition {
   top: string
@@ -6,6 +6,6 @@ export interface ButtonRipplePosition {
 }
 
 export interface ButtonProps {
-  onClick: () => void
+  onClick?: () => void
   buttonStyle?: ButtonStyle
 }

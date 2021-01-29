@@ -7,6 +7,7 @@ import { Card } from '../../atoms/Card';
 import Fade from 'react-reveal/Fade';
 import { useEffect, useState } from 'react';
 import{ init } from 'emailjs-com';
+import { getScreenSize, ScreenSize } from '../../../globalStyles/media';
 
 export const ContactSection: React.FC = () => {
 
@@ -21,11 +22,14 @@ export const ContactSection: React.FC = () => {
     }
   })
 
+  // Media query
+  const screenSize: ScreenSize = getScreenSize();
+
   return (
     <S.ContactSectionWrapper>
-      <S.ContactSectionContentWrapper>
+      <S.ContactSectionContentWrapper screenSize={screenSize}>
         <Fade bottom>
-          <Card cardStyle="profileCard">
+          <Card cardStyle="contactCard">
             <SectionHeader>Let's <span>connect</span> and <span>build</span><br /> something <span>beautiful</span> together</SectionHeader>
             <ContactForm />
           </Card>

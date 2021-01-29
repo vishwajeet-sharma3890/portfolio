@@ -55,7 +55,17 @@ export const defaultTheme = {
       color: C.theme.fontColors.white,
       fontSize: C.theme.fontSizes.paragraph2,
       fontWeight: C.theme.fontWeights.bold,
-    }
+    },
+    carousel: {
+      height: "42px",
+      padding: "0",
+      background: C.theme.backgroundColor.gradient1,
+      disabledBackground: C.theme.backgroundColor.gradient3,
+      shadow: C.theme.shadows.shadow1,
+      color: C.theme.fontColors.white,
+      fontSize: C.theme.fontSizes.subTitle,
+      fontWeight: C.theme.fontWeights.bold,
+    },
   },
   card: {
     profileCard: {
@@ -75,7 +85,28 @@ export const defaultTheme = {
     reviewCard: {
       background: C.theme.backgroundColor.white,
       height: "auto",
-      padding: "24px",
+      padding: {
+        largedesktop: "24px",
+        desktop: "24px",
+        largetab: "24px",
+        tab: "24px",
+        largemobile: "16px",
+        mobile: "16px",
+      },
+      shadow: C.theme.shadows.shadow1,
+      width: "auto",
+    },
+    contactCard: {
+      background: C.theme.backgroundColor.white,
+      height: "auto",
+      padding: {
+        largedesktop: "64px",
+        desktop: "64px",
+        largetab: "48px",
+        tab: "48px",
+        largemobile: "32px",
+        mobile: "32px",
+      },
       shadow: C.theme.shadows.shadow1,
       width: "auto",
     },
@@ -151,6 +182,16 @@ export const defaultTheme = {
         fontSize: C.theme.fontSizes.subHeading,
         fontWeight: C.theme.fontWeights.bold,
         textShadow: C.theme.shadows.shadow2,
+      },
+      contact: {
+        width: {
+          largedesktop: "50%",
+          desktop: "50%",
+          largetab: "70%",
+          tab: "70%",
+          largemobile: "90%",
+          mobile: "90%",
+        }
       },
       projects: {
         gridGap: {
@@ -283,7 +324,7 @@ export const defaultTheme = {
             },
           },
           maxWidth: "300px",
-          margin: "32px 0",
+          margin: "24px",
         },
 
       },

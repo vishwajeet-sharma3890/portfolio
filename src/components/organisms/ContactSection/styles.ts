@@ -1,4 +1,5 @@
 import {styled} from "../../../globalStyles";
+import { ScreenSize } from '../../../globalStyles/media';
 
 export const ContactSectionWrapper = styled.div`
   ${props => `
@@ -8,9 +9,9 @@ export const ContactSectionWrapper = styled.div`
   `}
 `
 
-export const ContactSectionContentWrapper = styled.div`
+export const ContactSectionContentWrapper = styled.div<{ screenSize: ScreenSize }>`
   ${props => `
     position: relative;
-    width: 50%;
+    width: ${props.theme.body.sections.projects[props.screenSize]};
   `}
 `

@@ -18,7 +18,7 @@ export const Button: React.FC<ButtonProps> = ({buttonStyle = "default", onClick,
     setTimeout(() => {
       setRipplePosition(null)
     }, 1000)
-    onClick()
+    onClick && onClick()
   }
 
   return (

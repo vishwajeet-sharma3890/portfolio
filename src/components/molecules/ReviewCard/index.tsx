@@ -17,7 +17,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ name, pictureUrl, review
         <S.ReviewCardOverlay src={overlayTopTimage} isTop={true}/>
         <S.ReviewCardOverlay src={overlayTopTimage} isTop={false}/>
         <S.ReviewCardProfileWrapper>
-          <ProfilePicture pictureUrl={pictureUrl} size="72px" />
+          <ProfilePicture pictureUrl={pictureUrl} size="72px" justifySelf="flex-start" margin="0" />
           <ReviewerName {...name} />
         </S.ReviewCardProfileWrapper>
         <ReviewerReview>
