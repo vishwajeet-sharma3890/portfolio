@@ -8,6 +8,7 @@ import { EmailJSResponseStatus, send } from 'emailjs-com';
 import { TextArea } from '../../atoms/TextArea';
 import { ErrorMessage } from '../../atoms/ErrorMessage';
 import { ContactFormProps } from './types';
+import { EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID } from '../../../utils/env';
 
 export const ContactForm: React.FC<ContactFormProps> = ({ onEmailSent }) => {
 
@@ -50,9 +51,15 @@ export const ContactForm: React.FC<ContactFormProps> = ({ onEmailSent }) => {
         email,
         message,
       };
-      // TODO : Add to env
-      setSendingMail(true)
-      send('service_z1syw9z', 'template_foayx6l', templateParams).then(handleSendEmailSuccess, handleSendEmailFailure);
+      
+      if (EMAIL_JS_SERVICE_ID && EMAIL_JS_TEMPLATE_ID) {
+        setSendingMail(true)
+        send(EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID, templateParams).then(handleSendEmailSuccess, handleSendEmailFailure);
+      }
+      else {
+        // TODO : Track event
+        console.error('Email JS params not present in ENV')
+      }
     } else {
       const newErrorFields: string[] = []
       if (!name) {

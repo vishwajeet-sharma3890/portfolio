@@ -10,6 +10,7 @@ import { getScreenSize, ScreenSize } from '../../../globalStyles/media';
 import { ContactEmailDetails } from '../../molecules/ContactForm/types';
 import smileyImg from '../../../images/smiley.png';
 import backgroundImg from '../../../images/circuits.png';
+import { EMAIL_JS_USER_ID } from '../../../utils/env';
 
 export const ContactSection: React.FC = () => {
 
@@ -19,8 +20,9 @@ export const ContactSection: React.FC = () => {
 
   useEffect(() => {
     if (!isEmailInitialized) {
-      // TODO : Use env
-      init('user_0K3tMxpof1ZiC6lXQMaM9');
+      if (EMAIL_JS_USER_ID) {
+        init(EMAIL_JS_USER_ID);
+      }
       setEmailInitialized(true);
     }
   });
