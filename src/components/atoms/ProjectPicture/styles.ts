@@ -1,9 +1,16 @@
 import { styled } from '../../../globalStyles';
+import { ScreenSize } from '../../../globalStyles/media';
 
-export const ProjectPictureContainer = styled.div`
+export const ProjectPictureContainer = styled.div<{ screenSize: ScreenSize }>`
   ${props => `
-    height: ${props.theme.body.sections.projects.image.height};
-    width: ${props.theme.body.sections.projects.image.width};
+    height: ${props.theme.body.sections.projects.image.height[props.screenSize]};
+    width: ${props.theme.body.sections.projects.image.width[props.screenSize]};
+    
+    img {
+      height: ${props.theme.body.sections.projects.image.height[props.screenSize]};
+      width: ${props.theme.body.sections.projects.image.width[props.screenSize]};
+    }
+    
   `}
 `
 

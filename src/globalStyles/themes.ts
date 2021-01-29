@@ -153,6 +153,14 @@ export const defaultTheme = {
         textShadow: C.theme.shadows.shadow2,
       },
       projects: {
+        gridGap: {
+          largedesktop: "72px",
+          desktop: "72px",
+          largetab: "56px",
+          tab: "56px",
+          largemobile: "32px",
+          mobile: "32px",
+        },
         background: {
           background: C.theme.backgroundColor.gradient1,
           shadow: C.theme.shadows.shadow3,
@@ -163,10 +171,24 @@ export const defaultTheme = {
           fontWeight: C.theme.fontWeights.semiBold,
         },
         image: {
-          height: "450px",
+          height: {
+            largedesktop: "auto",
+            desktop: "auto",
+            largetab: "auto",
+            tab: "auto",
+            largemobile: "auto",
+            mobile: "auto",
+          },
           shadow: C.theme.shadows.shadow1,
           shadowHover: C.theme.shadows.shadow4,
-          width: "350px",
+          width: {
+            largedesktop: "350px",
+            desktop: "350px",
+            largetab: "350px",
+            tab: "350px",
+            largemobile: "300px",
+            mobile: "300px",
+          },
         },
         link: {
           color: C.theme.fontColors.white,
@@ -175,7 +197,14 @@ export const defaultTheme = {
         },
         project: {
           color: C.theme.fontColors.gray1,
-          fontSize: C.theme.fontSizes.superHeading,
+          fontSize: {
+            largedesktop: C.theme.fontSizes.superHeading,
+            desktop: C.theme.fontSizes.superHeading,
+            largetab: C.theme.fontSizes.heading,
+            tab: C.theme.fontSizes.heading,
+            largemobile: C.theme.fontSizes.heading,
+            mobile: C.theme.fontSizes.heading,
+          },
           fontWeight: C.theme.fontWeights.bold,
         },
         tech: {

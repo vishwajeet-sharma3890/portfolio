@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as S from './styles';
 import Fade from 'react-reveal/Fade';
 import { Spacer } from '../Spacer';
-import { getScreenSize, ScreenSize } from '../../../globalStyles/media';
+import { getScreenSize, isMobileScreen, ScreenSize } from '../../../globalStyles/media';
 
 export const SectionHeader: React.FC = ({ children }) => {
 
@@ -14,7 +14,7 @@ export const SectionHeader: React.FC = ({ children }) => {
       <S.SectionWrapper>
         {children}
       </S.SectionWrapper>
-      <Spacer size={`${screenSize.includes("mobile") ? 32 : 64}px`} type="horizontal" />
+      <Spacer size={`${isMobileScreen(screenSize) ? 32 : 64}px`} type="horizontal" />
     </Fade>
   );
 };

@@ -2,10 +2,15 @@ import * as React from "react"
 import * as S from "./styles"
 import {ProjectDescriptionProps} from "./types"
 import { Spacer } from '../Spacer';
+import { getScreenSize, ScreenSize } from '../../../globalStyles/media';
 
-export const ProjectDescription: React.FC<ProjectDescriptionProps> = ({year, company, project, technology, link}) => {
+export const ProjectDescription: React.FC<ProjectDescriptionProps> = ({textAlign = "left", year, company, project, technology, link}) => {
+
+  // Media query
+  const screenSize: ScreenSize = getScreenSize()
+
   return (
-    <S.ProjectDescriptionWrapper>
+    <S.ProjectDescriptionWrapper screenSize={screenSize} textAlign={textAlign}>
       <h6>{year}</h6>
       <h5>{company}</h5>
       <Spacer size="16px" type="horizontal" />

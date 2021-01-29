@@ -1,7 +1,10 @@
 import {styled} from "../../../globalStyles";
+import { ScreenSize, TextAlign } from '../../../globalStyles/media';
 
-export const ProjectDescriptionWrapper = styled.div`
+export const ProjectDescriptionWrapper = styled.div<{ screenSize: ScreenSize, textAlign: TextAlign }>`
   ${props => `
+  
+    text-align: ${props.textAlign};
   
     h6 {
       opacity: 0.38;
@@ -21,7 +24,7 @@ export const ProjectDescriptionWrapper = styled.div`
     
     h3 {
       color: ${props.theme.body.sections.projects.project.color};
-      font-size: ${props.theme.body.sections.projects.project.fontSize};
+      font-size: ${props.theme.body.sections.projects.project.fontSize[props.screenSize]};
       font-weight: ${props.theme.body.sections.projects.project.fontWeight};
       text-shadow: ${props.theme.body.sections.heading.textShadow};
       margin: 0;

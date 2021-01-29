@@ -1,6 +1,7 @@
 import { useMedia } from 'react-media';
 
 export type ScreenSize = "largedesktop" | "desktop" | "largetab" | "tag" | "largemobile" | "mobile"
+export type TextAlign = "left" | "center" | "right"
 
 const GLOBAL_MEDIA_QUERIES = {
   largedesktop: "(min-width: 4000px)",
@@ -31,4 +32,8 @@ export const getScreenSize = () => {
     }
   })
   return calculatedScreenSize
+}
+
+export const isMobileScreen = (screenSize: ScreenSize) => {
+  return screenSize.includes('mobile')
 }

@@ -13,7 +13,7 @@ import { ReviewSection } from '../../organisms/ReviewSection';
 import { ContactSection } from '../../organisms/ContactSection';
 import { ProfileIcons } from '../../molecules/ProfileIcons';
 import { theme } from '../../../globalStyles/constants';
-import { getScreenSize, ScreenSize } from '../../../globalStyles/media';
+import { getScreenSize, isMobileScreen, ScreenSize } from '../../../globalStyles/media';
 
 export const MainPage: React.FC = () => {
 
@@ -25,17 +25,17 @@ export const MainPage: React.FC = () => {
 
   // Media query
   const screenSize: ScreenSize = getScreenSize()
-  const isMobileScreen = screenSize.includes("mobile")
+  const mobileScreen = isMobileScreen(screenSize)
 
   useEffect(() => {
     if (profileRef && profileRef.current) {
-      setBodyMargin(profileRef.current.clientHeight - (isMobileScreen ? 120 : 90));
+      setBodyMargin(profileRef.current.clientHeight - (mobileScreen ? 120 : 90));
     }
   });
 
   // Section spacer according to screenSize
   let sectionSpacer = 64
-  if (isMobileScreen) {
+  if (mobileScreen) {
     sectionSpacer = 32
   }
 

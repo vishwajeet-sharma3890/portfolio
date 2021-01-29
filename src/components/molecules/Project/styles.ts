@@ -1,13 +1,16 @@
 import {styled} from "../../../globalStyles";
 import { ProjectOrientation } from './types';
+import { ScreenSize } from '../../../globalStyles/media';
 
-export const ProjectWrapper = styled.div`
+export const ProjectWrapper = styled.div<{screenSize: ScreenSize}>`
   ${props => `
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    grid-gap: 72px;
+    grid-gap: ${props.theme.body.sections.projects.gridGap[props.screenSize]};
+    padding: 52px 0;
   `}
 `
 
