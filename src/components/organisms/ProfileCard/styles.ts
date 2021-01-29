@@ -9,3 +9,9 @@ export const ProfileCardWrapper = styled.div`
     max-width: 720px;
   `}
 `;
+
+export const ProfileCardDetailsWrapper = styled.div`
+  ${props => `
+    margin: auto;
+  `}
+`;

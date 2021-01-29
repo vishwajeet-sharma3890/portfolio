@@ -37,3 +37,7 @@ export const getScreenSize = () => {
 export const isMobileScreen = (screenSize: ScreenSize) => {
   return screenSize.includes('mobile')
 }
+
+export const isTabletScreen = (screenSize: ScreenSize) => {
+  return screenSize.includes('tab')
+}

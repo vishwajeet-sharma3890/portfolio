@@ -11,7 +11,7 @@ import {ProfileIcons} from "../../molecules/ProfileIcons";
 import {faFacebook, faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {Spacer} from "../../atoms/Spacer";
 import {IconButtonProps} from "../../atoms/IconButton/types";
-import { getScreenSize, isMobileScreen, ScreenSize } from '../../../globalStyles/media';
+import { getScreenSize, isMobileScreen, isTabletScreen, ScreenSize } from '../../../globalStyles/media';
 
 const attributes: ProfileAttributeProps[] = [
   {
@@ -47,20 +47,22 @@ export const ProfileCard: React.FC = () => {
 
   // Media query
   const screenSize: ScreenSize = getScreenSize()
-
   let profilePictureSize = "255px"
   if (isMobileScreen(screenSize)) {
     profilePictureSize = "125px"
+  }
+  if (isTabletScreen(screenSize)) {
+    profilePictureSize = "175px"
   }
   return (
     <Card cardStyle="profileCard">
       <S.ProfileCardWrapper>
         <ProfilePicture size={profilePictureSize} pictureUrl={profileImage}/>
-        <div>
+        <S.ProfileCardDetailsWrapper>
           <ProfileName name="Vish Sharma" position="Web and Mobile App Developer"/>
           <Divider size="2px" type="horizontal" margin="32px 0"/>
           <ProfileAttributes attributes={attributes}/>
-        </div>
+        </S.ProfileCardDetailsWrapper>
       </S.ProfileCardWrapper>
       <Spacer size="56px" type="horizontal"/>
       <ProfileIcons icons={icons}/>
