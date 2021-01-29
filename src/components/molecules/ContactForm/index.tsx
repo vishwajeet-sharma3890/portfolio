@@ -51,14 +51,13 @@ export const ContactForm: React.FC<ContactFormProps> = ({ onEmailSent }) => {
         email,
         message,
       };
-      
+
       if (EMAIL_JS_SERVICE_ID && EMAIL_JS_TEMPLATE_ID) {
         setSendingMail(true)
         send(EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID, templateParams).then(handleSendEmailSuccess, handleSendEmailFailure);
       }
       else {
         // TODO : Track event
-        console.error('Email JS params not present in ENV')
       }
     } else {
       const newErrorFields: string[] = []
