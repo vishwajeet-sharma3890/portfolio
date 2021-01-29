@@ -21,8 +21,6 @@ export const Button: React.FC<ButtonProps> = ({buttonStyle = "default", onClick,
     onClick()
   }
 
-  console.log(ripplePosition)
-
   return (
     <S.ButtonWrapper disabled={Boolean(ripplePosition)} onClick={handleClick} buttonStyle={buttonStyle}>
       {children}

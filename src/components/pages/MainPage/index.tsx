@@ -13,6 +13,7 @@ import { ReviewSection } from '../../organisms/ReviewSection';
 import { ContactSection } from '../../organisms/ContactSection';
 import { ProfileIcons } from '../../molecules/ProfileIcons';
 import { theme } from '../../../globalStyles/constants';
+import { getScreenSize, ScreenSize } from '../../../globalStyles/media';
 
 export const MainPage: React.FC = () => {
 
@@ -28,12 +29,15 @@ export const MainPage: React.FC = () => {
     }
   });
 
+  // Media query
+  const screenSize: ScreenSize = getScreenSize()
+
   return (
     <S.MainPageWrapper>
       <header>
         <S.BannerContainer>
           <Banner />
-          <S.ProfileContainer ref={profileRef}>
+          <S.ProfileContainer ref={profileRef} screenSize={screenSize}>
             <ProfileCard />
           </S.ProfileContainer>
         </S.BannerContainer>
@@ -46,10 +50,12 @@ export const MainPage: React.FC = () => {
         out the best in myself and the people I work with. I have worked in the IT industry for 7 years and<br />
         worked on a variety of technologies and projects. I love a challenge and I am quick to adapt and<br />
         evolve, see the bigger picture and solve problems for customers.<br />
-        <Spacer size="64px" type="horizontal" />
-        <Button onClick={() => ''}>Download Resume</Button>
-        <Spacer size="64px" type="horizontal" />
       </ProfileDescription>
+      <Spacer size="64px" type="horizontal" />
+      <S.DownloadButtonContainer>
+        <Button onClick={() => ''}>Download Resume</Button>
+      </S.DownloadButtonContainer>
+      <Spacer size="64px" type="horizontal" />
       <TechSection />
       <Spacer size="132px" type="horizontal" />
       <ProjectSection />

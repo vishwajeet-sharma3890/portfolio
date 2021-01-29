@@ -1,4 +1,5 @@
 import {styled} from "../../../globalStyles";
+import { ScreenSize } from '../../../globalStyles/media';
 
 export const MainPageWrapper = styled.div`
   ${props => `
@@ -21,11 +22,19 @@ export const BannerContainer = styled.div`
   `}
 `
 
-export const ProfileContainer = styled.div`
+export const DownloadButtonContainer = styled.div`
+  ${props => `
+    position: relative;
+    display: flex;
+    justify-content: center;
+  `}
+`
+
+export const ProfileContainer = styled.div<{ screenSize: ScreenSize }>`
   ${props => `
     position: absolute;
     width: 100%;
-    top: 50%;
+    top: ${props.theme.banner.top[props.screenSize]};
     display: flex;
     align-items: center;
     justify-content: center;

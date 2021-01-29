@@ -61,7 +61,14 @@ export const defaultTheme = {
     profileCard: {
       background: C.theme.backgroundColor.white,
       height: "auto",
-      padding: "64px",
+      padding: {
+        largedesktop: "64px",
+        desktop: "64px",
+        largetab: "48px",
+        tab: "48px",
+        largemobile: "32px",
+        mobile: "32px",
+      },
       shadow: C.theme.shadows.shadow1,
       width: "auto",
     },
@@ -75,6 +82,14 @@ export const defaultTheme = {
   },
   banner: {
     profile: {
+      display: {
+        largedesktop: "flex",
+        desktop: "flex",
+        largetab: "flex",
+        tab: "flex",
+        largemobile: "block",
+        mobile: "block",
+      },
       attributes: {
         label: {
           color: C.theme.fontColors.gray2,
@@ -88,6 +103,14 @@ export const defaultTheme = {
         },
       },
       name: {
+        textAlign: {
+          largedesktop: "left",
+          desktop: "left",
+          largetab: "left",
+          tab: "left",
+          largemobile: "center",
+          mobile: "center",
+        },
         label: {
           color: C.theme.fontColors.black,
           fontSize: C.theme.fontSizes.heading,
@@ -104,6 +127,14 @@ export const defaultTheme = {
         fontSize: C.theme.fontSizes.subTitle,
         fontWeight: C.theme.fontWeights.semiBold,
       },
+    },
+    top: {
+      largedesktop: "50%",
+      desktop: "50%",
+      largetab: "50%",
+      tab: "50%",
+      largemobile: "30%",
+      mobile: "30%",
     },
     shadow: C.theme.shadows.shadow3,
   },
