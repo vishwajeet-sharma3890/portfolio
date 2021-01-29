@@ -6,7 +6,6 @@ import { ReviewCardProps } from '../../molecules/ReviewCard/types';
 import sampleReviewerPicture from '../../../images/samplereviewerpic.svg';
 import Carousel, { autoplayPlugin, slidesToShowPlugin } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
-import 'react-multi-carousel/lib/styles.css';
 import { getScreenSize, isMobileScreen, ScreenSize } from '../../../globalStyles/media';
 import Fade from 'react-reveal/Fade';
 
