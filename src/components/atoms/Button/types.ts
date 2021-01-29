@@ -8,4 +8,5 @@ export interface ButtonRipplePosition {
 export interface ButtonProps {
   onClick?: () => void
   buttonStyle?: ButtonStyle
+  disabled?: boolean
 }

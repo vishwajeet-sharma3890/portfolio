@@ -3,7 +3,7 @@ import * as S from './styles';
 import { InputProps } from './types';
 import { useState } from 'react';
 
-export const Input: React.FC<InputProps> = ({ onChange, value, placeholder }) => {
+export const Input: React.FC<InputProps> = ({ onChange, value, placeholder, error }) => {
 
   // States
   const [isActive, setActive] = useState(false)
@@ -14,7 +14,7 @@ export const Input: React.FC<InputProps> = ({ onChange, value, placeholder }) =>
   }
 
   return (
-    <S.InputWrapper isActive={isActive} >
+    <S.InputWrapper isActive={isActive} error={error} >
       <input placeholder={placeholder} value={value} onChange={handleChange} />
     </S.InputWrapper>
   );

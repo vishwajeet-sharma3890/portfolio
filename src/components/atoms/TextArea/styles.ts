@@ -1,16 +1,16 @@
 import { styled } from '../../../globalStyles';
 
 
-export const TextAreaWrapper = styled.div<{ isActive: boolean }>`
+export const TextAreaWrapper = styled.div<{ isActive: boolean, error?: boolean }>`
   ${props => `
   
-    background: ${props.isActive ? props.theme.textarea.hoverBackground : props.theme.textarea.background};
+    background-image: ${props.error ? props.theme.textarea.errorBackground : props.isActive ? props.theme.textarea.hoverBackground : props.theme.textarea.background};
     width: ${props.theme.input.width};
     padding: 2px;
     margin: auto;
     
     :hover {
-      background: ${props.theme.textarea.hoverBackground};
+      background-image: ${props.error ? props.theme.textarea.errorHoverBackground : props.theme.textarea.hoverBackground};
     }
     
     textarea {

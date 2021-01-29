@@ -1,9 +1,9 @@
 import { styled } from '../../../globalStyles';
 
-export const InputWrapper = styled.div<{ isActive?: boolean }>`
+export const InputWrapper = styled.div<{ isActive?: boolean, error?: boolean }>`
   ${props => `
   
-    background-image: ${props.isActive ? props.theme.input.hoverBackground : props.theme.input.background};
+    background-image: ${props.error ? props.theme.input.errorBackground : props.isActive ? props.theme.input.hoverBackground : props.theme.input.background};
     width: ${props.theme.input.width};
     padding: 2px;
     margin: auto;
@@ -11,7 +11,7 @@ export const InputWrapper = styled.div<{ isActive?: boolean }>`
     transition: background-image 0.2s ease-in-out;
     
     :hover {
-      background-image: ${props.theme.input.hoverBackground};
+      background-image: ${props.error ? props.theme.input.errorHoverBackground : props.theme.input.hoverBackground};
     }
   
     input {

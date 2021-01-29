@@ -5,3 +5,9 @@ export const ContactFormWrapper = styled.div`
     text-align: center;
   `}
 `
+
+export const ErrorMessageWrapper = styled.div`
+  ${props => `
+    padding: 0 32px;
+  `}
+`

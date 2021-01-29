@@ -3,7 +3,7 @@ import * as S from "./styles"
 import { ButtonProps, ButtonRipplePosition } from './types';
 import { useState } from 'react';
 
-export const Button: React.FC<ButtonProps> = ({buttonStyle = "default", onClick, children}) => {
+export const Button: React.FC<ButtonProps> = ({disabled, buttonStyle = "default", onClick, children}) => {
 
   // States
   const [ripplePosition, setRipplePosition] = useState<ButtonRipplePosition | null>(null)
@@ -22,7 +22,7 @@ export const Button: React.FC<ButtonProps> = ({buttonStyle = "default", onClick,
   }
 
   return (
-    <S.ButtonWrapper disabled={Boolean(ripplePosition)} onClick={handleClick} buttonStyle={buttonStyle}>
+    <S.ButtonWrapper disabled={disabled || Boolean(ripplePosition)} onClick={handleClick} buttonStyle={buttonStyle}>
       {children}
       {ripplePosition && <S.RippleSpan position={ripplePosition}/>}
     </S.ButtonWrapper>

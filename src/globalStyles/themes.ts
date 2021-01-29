@@ -7,6 +7,8 @@ export const defaultTheme = {
   },
   input: {
     background: C.theme.backgroundColor.gradient3,
+    errorBackground: C.theme.backgroundColor.gradient5,
+    errorHoverBackground: C.theme.backgroundColor.gradient4,
     hoverBackground: C.theme.backgroundColor.gradient1,
     height: "32px",
     width: "312px",
@@ -22,6 +24,8 @@ export const defaultTheme = {
   },
   textarea: {
     background: C.theme.backgroundColor.gradient3,
+    errorBackground: C.theme.backgroundColor.gradient5,
+    errorHoverBackground: C.theme.backgroundColor.gradient4,
     hoverBackground: C.theme.backgroundColor.gradient1,
     height: "64px",
     width: "312px",
@@ -396,6 +400,11 @@ export const defaultTheme = {
   },
   divider: {
     background: C.theme.backgroundColor.gray1,
+  },
+  error: {
+    color: C.theme.fontColors.error1,
+    fontSize: C.theme.fontSizes.caption,
+    fontWeight: C.theme.fontWeights.semiBold,
   },
   typography: {
     baseFontColor: C.theme.colors.black,

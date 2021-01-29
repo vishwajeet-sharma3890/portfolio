@@ -9,6 +9,8 @@ export const xSmallScreen = 320
 const primary = "#28C989"
 const secondary = "#0A62C7"
 const accent = ""
+const error1 = "#C92828"
+const error2 = "#C70A7B"
 const black = "#000"
 const white = "#fff"
 const gray1 = "#EAEAEA";
@@ -20,6 +22,8 @@ const darkoverlay = "rgba(0,0,0, 0.8)";
 export const gradient1 = `linear-gradient(-45deg, ${primary}, ${secondary} 100%)`
 export const gradient2 = `linear-gradient(to right, ${black}, #505050 100%)`
 export const gradient3 = `linear-gradient(-45deg, ${primary}80, ${secondary}80 60%)`
+export const gradient4 = `linear-gradient(-45deg, ${error1}, ${error2})`
+export const gradient5= `linear-gradient(-45deg, ${error1}80, ${error2}80)`
 
 // Shadows
 export const shadow1 = `0 8px 18px 0 rgba(0, 0, 0, 0.16)`
@@ -89,6 +93,8 @@ export const theme = {
     gradient1,
     gradient2,
     gradient3,
+    gradient4,
+    gradient5,
     overlay,
     darkoverlay,
     black,
@@ -110,6 +116,7 @@ export const theme = {
     gray1,
     gray2,
     white,
+    error1,
   },
   fontSizes: {
     caption: fontSizeCaption, // 12px

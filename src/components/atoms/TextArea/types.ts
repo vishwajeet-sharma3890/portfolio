@@ -4,4 +4,5 @@ export interface TextAreaProps {
   placeholder: string
   value: string
   onChange: ChangeEventHandler<HTMLTextAreaElement>
+  error?: boolean
 }

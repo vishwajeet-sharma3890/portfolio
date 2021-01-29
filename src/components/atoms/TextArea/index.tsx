@@ -3,7 +3,7 @@ import * as S from './styles';
 import { TextAreaProps } from './types';
 import { useState } from 'react';
 
-export const TextArea: React.FC<TextAreaProps> = ({ onChange, value, placeholder }) => {
+export const TextArea: React.FC<TextAreaProps> = ({ onChange, value, placeholder , error}) => {
 
   // States
   const [isActive, setActive] = useState(false)
@@ -14,7 +14,7 @@ export const TextArea: React.FC<TextAreaProps> = ({ onChange, value, placeholder
   }
 
   return (
-    <S.TextAreaWrapper isActive={isActive}>
+    <S.TextAreaWrapper isActive={isActive} error={error}>
       <textarea placeholder={placeholder} value={value} onChange={handleChange} />
     </S.TextAreaWrapper>
   );
