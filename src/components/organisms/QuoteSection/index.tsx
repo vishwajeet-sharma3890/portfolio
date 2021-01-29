@@ -4,6 +4,7 @@ import { SectionHeader } from '../../atoms/SectionHeader';
 import { ParallaxContainer } from '../../atoms/ParallaxContainer';
 import quoteBackgroundImage from '../../../images/quote-background.jpg';
 import { getScreenSize, ScreenSize } from '../../../globalStyles/media';
+import Fade from 'react-reveal/Fade';
 
 export const QuoteSection: React.FC = () => {
 
@@ -16,8 +17,10 @@ export const QuoteSection: React.FC = () => {
       <ParallaxContainer backgroundImageUrl={quoteBackgroundImage}>
         <S.QuoteSectionOverlay>
           <S.QuoteSectionTextWrapper screenSize={screenSize}>
+            <Fade bottom>
             "I want you to know that it doesn't matter how hard you work, that I'm willing to work harder than you." -
             Kobe Bryant to Jay Williams
+            </Fade>
           </S.QuoteSectionTextWrapper>
         </S.QuoteSectionOverlay>
       </ParallaxContainer>

@@ -14,7 +14,7 @@ export const ProjectPictureContainer = styled.div<{ screenSize: ScreenSize }>`
   `}
 `
 
-export const ProjectPictureWrapper = styled.div`
+export const ProjectPictureWrapper = styled.div<{ isMobile?: boolean }>`
   ${props => `
   position: relative;
     z-index: 1;
@@ -23,10 +23,13 @@ export const ProjectPictureWrapper = styled.div`
     perspective: 1000px;
     transition: transform 0.35s;
 
-    &:hover {
+    ${props.isMobile ? `` : `
+      &:hover {
         transform: scale(1.2);
         z-index: 10;
-    }
+      }    
+    `}
+
   `}
 `;
 

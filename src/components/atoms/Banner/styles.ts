@@ -1,4 +1,5 @@
 import { styled } from '../../../globalStyles';
+import { ScreenSize } from '../../../globalStyles/media';
 
 export const BannerWrapper = styled.div`
   ${props => `
@@ -9,10 +10,12 @@ export const BannerWrapper = styled.div`
   `}
 `;
 
-export const BannerJPGImage = styled.div<{ backgroundImage: string }>`
+export const BannerJPGImage = styled.div<{ backgroundImage: string, screenSize: ScreenSize }>`
+  ${props => `
+    height: ${props.theme.banner.height[props.screenSize]};
+    width: 100%;
+  `};
   object-fit: cover;
-  width: 100%;
-  height: 37vh;
   background-color:#C0DEED;
   background: url(${props => props.backgroundImage}) center top repeat-x;
   animation: ${props => props.theme.animation.cloudAnimation} 20s alternate infinite;

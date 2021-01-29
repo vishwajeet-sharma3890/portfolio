@@ -1,6 +1,7 @@
 import {styled} from "../../../globalStyles";
+import { ScreenSize } from '../../../globalStyles/media';
 
-export const ProfileDescriptionWrapper = styled.div`
+export const ProfileDescriptionWrapper = styled.div<{ screenSize: ScreenSize }>`
   ${props => `
     
     color: ${props.theme.body.description.color};
@@ -9,8 +10,10 @@ export const ProfileDescriptionWrapper = styled.div`
     text-align: center;
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: auto;
     margin: auto;
+    padding: 16px;
+    width: ${props.theme.body.description.width[props.screenSize]};
     
     p {
       line-height: 32px;

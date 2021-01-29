@@ -11,5 +11,6 @@ export const SectionWrapper = styled.h3`
     span {
       color: ${props.theme.body.sections.heading.accentColor};
     }
+    padding: 0 24px;
   `}
 `

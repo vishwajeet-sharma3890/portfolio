@@ -4,5 +4,6 @@ export interface ProjectPictureState {
 
 export interface ProjectPictureProps {
   pictureUrl: string
+  link: string
   index: number
 }

@@ -33,8 +33,12 @@ export const DownloadButtonContainer = styled.div`
 export const ProfileContainer = styled.div<{ screenSize: ScreenSize }>`
   ${props => `
     position: absolute;
-    width: 100%;
+    width: 90%;
     top: ${props.theme.banner.top[props.screenSize]};
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;

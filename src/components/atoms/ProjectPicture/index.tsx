@@ -3,13 +3,13 @@ import * as S from './styles';
 import { ProjectPictureProps } from './types';
 import { getScreenSize, isMobileScreen, ScreenSize } from '../../../globalStyles/media';
 
-export const ProjectPicture: React.FC<ProjectPictureProps> = ({ pictureUrl, index }) => {
+export const ProjectPicture: React.FC<ProjectPictureProps> = ({ pictureUrl, link, index }) => {
 
   const maxTilt = 30; // Max card tilt (deg).
 
   // Media query
-  const screenSize: ScreenSize = getScreenSize()
-  const isMobile = isMobileScreen(screenSize)
+  const screenSize: ScreenSize = getScreenSize();
+  const isMobile = isMobileScreen(screenSize);
 
   // Finding out the bounding element from mouse event
   const mouseOverBoundingElem = (evt: any | null) => {
@@ -34,7 +34,7 @@ export const ProjectPicture: React.FC<ProjectPictureProps> = ({ pictureUrl, inde
 
     // Don't animate if mobile screen
     if (isMobile) {
-      return
+      return;
     }
 
     const bounding = mouseOverBoundingElem(evt);
@@ -79,9 +79,11 @@ export const ProjectPicture: React.FC<ProjectPictureProps> = ({ pictureUrl, inde
 
   return (
     <S.ProjectPictureContainer screenSize={screenSize}>
-      <S.ProjectPictureWrapper onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+      <S.ProjectPictureWrapper onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} isMobile={isMobile}>
         <S.ProjectPictureHoverWrapper id={`project-picture-cover${index}`} backgroundImage={pictureUrl}>
-          <img src={pictureUrl} alt="project-picture" />
+          <a href={link} target="_blank">
+            <img src={pictureUrl} alt="project-picture" />
+          </a>
           <S.ProjectPictureGloss id={`project-picture-gloss${index}`} />
         </S.ProjectPictureHoverWrapper>
       </S.ProjectPictureWrapper>

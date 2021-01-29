@@ -19,7 +19,7 @@ export const Project: React.FC<ProjectProps> = ({ orientation, projectImage, des
         orientation === 'left' || isMobile ?
           <>
             <Fade left>
-              <ProjectPicture pictureUrl={projectImage} index={index} />
+              <ProjectPicture pictureUrl={projectImage} link={description.link} index={index} />
             </Fade>
             <Fade right>
               <ProjectDescription textAlign={orientation} {...description} />
@@ -31,7 +31,7 @@ export const Project: React.FC<ProjectProps> = ({ orientation, projectImage, des
               <ProjectDescription textAlign="right" {...description} />
             </Fade>
             <Fade right>
-              <ProjectPicture pictureUrl={projectImage} index={index} />
+              <ProjectPicture pictureUrl={projectImage} link={description.link} index={index} />
             </Fade>
           </>
       }
