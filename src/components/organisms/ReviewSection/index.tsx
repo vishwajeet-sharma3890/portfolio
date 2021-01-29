@@ -8,6 +8,7 @@ import Carousel, { autoplayPlugin, slidesToShowPlugin } from '@brainhubeu/react-
 import '@brainhubeu/react-carousel/lib/style.css';
 import 'react-multi-carousel/lib/styles.css';
 import { getScreenSize, isMobileScreen, ScreenSize } from '../../../globalStyles/media';
+import Fade from 'react-reveal/Fade';
 
 const reviews: ReviewCardProps[] = [
   {
@@ -62,35 +63,67 @@ export const ReviewSection: React.FC = () => {
   const screenSize: ScreenSize = getScreenSize();
   const mobileScreen = isMobileScreen(screenSize);
 
+  const getNumberOfSlides = () => {
+
+    const screen = screenSize as string
+
+    switch (screen) {
+      case 'largedesktop': {
+        return 5;
+      }
+      case 'desktop': {
+        return 4
+      }
+      case 'largetab': {
+        return 2
+      }
+      case 'tab': {
+        return 2
+      }
+      case 'largemobile': {
+        return 1
+      }
+      case 'mobile': {
+        return 1
+      }
+      default : return 1
+    }
+  }
+
   return (
     <S.ReviewSectionWrapper>
       <SectionHeader><span>Hear</span> it from the <span>people</span> I <span>worked</span> with</SectionHeader>
       <S.ReviewSectionContentWrapper>
-        <Carousel
-          plugins={[
-            'centered',
-            'infinite',
-            {
-              resolve: autoplayPlugin,
-              options: {
-                interval: 3000,
+        <S.ReviewSectionBackgroundWrapper>
+          <S.ReviewSectionBackground />
+        </S.ReviewSectionBackgroundWrapper>
+        <Fade bottom>
+          <Carousel
+            plugins={[
+              'centered',
+              'infinite',
+              {
+                resolve: autoplayPlugin,
+                options: {
+                  interval: 3000,
+                },
               },
-            },
-            {
-              resolve: slidesToShowPlugin,
-              options: {
-                numberOfSlides: mobileScreen ? 1 : 2,
+              {
+                resolve: slidesToShowPlugin,
+                options: {
+                  numberOfSlides: getNumberOfSlides(),
+                },
               },
-            },
-          ]}
-          animationSpeed={1000}
-        >
-          {
-            reviews.map((review, index) => (
-              <ReviewCard key={`ReviewSectionWrapper${index}`} {...review} />
-            ))
-          }
-        </Carousel>
+            ]}
+            animationSpeed={1000}
+          >
+            {
+              reviews.map((review, index) => (
+                <ReviewCard key={`ReviewSectionWrapper${index}`} {...review} />
+              ))
+            }
+          </Carousel>
+        </Fade>
       </S.ReviewSectionContentWrapper>
     </S.ReviewSectionWrapper>
   );

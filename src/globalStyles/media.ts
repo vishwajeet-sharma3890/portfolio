@@ -1,6 +1,6 @@
 import { useMedia } from 'react-media';
 
-export type ScreenSize = "largedesktop" | "desktop" | "largetab" | "tag" | "largemobile" | "mobile"
+export type ScreenSize = "largedesktop" | "desktop" | "largetab" | "tab" | "largemobile" | "mobile"
 export type TextAlign = "left" | "center" | "right"
 
 const GLOBAL_MEDIA_QUERIES = {

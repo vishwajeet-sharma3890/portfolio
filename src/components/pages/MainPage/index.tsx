@@ -69,7 +69,7 @@ export const MainPage: React.FC = () => {
       <QuoteSection />
       <Spacer size={`${sectionSpacer * 2}px`} type="horizontal" />
       <ReviewSection />
-      <Spacer size={`${sectionSpacer}px`} type="horizontal" />
+      <Spacer size={`${sectionSpacer * 2}px`} type="horizontal" />
       <ContactSection />
       <Spacer size={`${sectionSpacer}px`} type="horizontal" />
       <footer>
