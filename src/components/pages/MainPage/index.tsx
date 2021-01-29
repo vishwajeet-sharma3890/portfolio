@@ -71,7 +71,6 @@ export const MainPage: React.FC = () => {
       <ReviewSection />
       <Spacer size={`${sectionSpacer * 2}px`} type="horizontal" />
       <ContactSection />
-      <Spacer size={`${sectionSpacer}px`} type="horizontal" />
       <footer>
         <ProfileIcons icons={icons} defaultColor={theme.colors.white} />
         <Spacer size={`${sectionSpacer + 32}px`} type="horizontal" />

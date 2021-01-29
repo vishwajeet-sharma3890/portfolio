@@ -248,12 +248,20 @@ export const defaultTheme = {
       },
       contact: {
         width: {
-          largedesktop: "50%",
-          desktop: "50%",
-          largetab: "70%",
-          tab: "70%",
-          largemobile: "90%",
-          mobile: "90%",
+          largedesktop: "auto",
+          desktop: "auto",
+          largetab: "auto",
+          tab: "auto",
+          largemobile: "auto",
+          mobile: "auto",
+        },
+        padding: {
+          largedesktop: "0 0 64px 0",
+          desktop: "0 0 64px 0",
+          largetab: "0 0 64px 0",
+          tab: "0 0 64px 0",
+          largemobile: "0 0 32px 0",
+          mobile: "0 0 32px 0",
         }
       },
       projects: {

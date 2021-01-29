@@ -12,6 +12,18 @@ export const ContactSectionWrapper = styled.div`
 export const ContactSectionContentWrapper = styled.div<{ screenSize: ScreenSize }>`
   ${props => `
     position: relative;
-    width: ${props.theme.body.sections.projects[props.screenSize]};
+    width: ${props.theme.body.sections.contact.width[props.screenSize]};
+    padding: ${props.theme.body.sections.contact.padding[props.screenSize]};
+  `}
+`
+
+export const ContactSectionBackgroundWrapper = styled.img`
+  ${props => `
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    bottom: 0;
+    object-fit: cover;
+    
   `}
 `
