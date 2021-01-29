@@ -4,8 +4,6 @@ import { SectionHeader } from '../../atoms/SectionHeader';
 import { ReviewCard } from '../../molecules/ReviewCard';
 import { ReviewCardProps } from '../../molecules/ReviewCard/types';
 import sampleReviewerPicture from '../../../images/samplereviewerpic.svg';
-import Carousel, { autoplayPlugin, slidesToShowPlugin } from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
 import { getScreenSize, isMobileScreen, ScreenSize } from '../../../globalStyles/media';
 import Fade from 'react-reveal/Fade';
 
@@ -97,31 +95,7 @@ export const ReviewSection: React.FC = () => {
           <S.ReviewSectionBackground />
         </S.ReviewSectionBackgroundWrapper>
         <Fade bottom>
-          <Carousel
-            plugins={[
-              'centered',
-              'infinite',
-              {
-                resolve: autoplayPlugin,
-                options: {
-                  interval: 3000,
-                },
-              },
-              {
-                resolve: slidesToShowPlugin,
-                options: {
-                  numberOfSlides: getNumberOfSlides(),
-                },
-              },
-            ]}
-            animationSpeed={1000}
-          >
-            {
-              reviews.map((review, index) => (
-                <ReviewCard key={`ReviewSectionWrapper${index}`} {...review} />
-              ))
-            }
-          </Carousel>
+          <div></div>
         </Fade>
       </S.ReviewSectionContentWrapper>
     </S.ReviewSectionWrapper>

@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@brainhubeu/react-carousel": "^2.0.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-regular-svg-icons": "^5.15.2",
@@ -34,7 +33,6 @@
     "web-vitals": "^0.2.4"
   },
   "devDependencies": {
-    "@types/brainhubeu__react-carousel": "^2.0.2",
     "@types/styled-components": "^4.1.16"
   },
   "scripts": {
