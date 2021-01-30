@@ -1,12 +1,13 @@
 import { styled } from '../../../globalStyles';
+import { ScreenSize } from '../../../globalStyles/media';
 
-export const ProfileCardWrapper = styled.div`
+export const ProfileCardWrapper = styled.div<{ screenSize: ScreenSize }>`
   ${props => `
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     grid-gap: 5.625vw;
-    max-width: 720px;
+    max-width: ${props.theme.banner.profile.maxWidth[props.screenSize]};
   `}
 `;
 

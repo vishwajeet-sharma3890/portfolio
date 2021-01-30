@@ -47,16 +47,20 @@ export const ProfileCard: React.FC = () => {
 
   // Media query
   const screenSize: ScreenSize = getScreenSize()
+  console.log(screenSize)
   let profilePictureSize = "255px"
   if (isMobileScreen(screenSize)) {
     profilePictureSize = "125px"
   }
-  if (isTabletScreen(screenSize)) {
+  else if (isTabletScreen(screenSize)) {
     profilePictureSize = "175px"
+  }
+  else if (screenSize as string === "largedesktop") {
+    profilePictureSize = "375px"
   }
   return (
     <Card cardStyle="profileCard">
-      <S.ProfileCardWrapper>
+      <S.ProfileCardWrapper screenSize={screenSize}>
         <ProfilePicture size={profilePictureSize} pictureUrl={profileImage}/>
         <S.ProfileCardDetailsWrapper>
           <ProfileName name="Vish Sharma" position="Web and Mobile App Developer"/>

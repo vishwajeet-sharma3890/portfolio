@@ -4,8 +4,8 @@ export type ScreenSize = "largedesktop" | "desktop" | "largetab" | "tab" | "larg
 export type TextAlign = "left" | "center" | "right"
 
 const GLOBAL_MEDIA_QUERIES = {
-  largedesktop: "(min-width: 4000px)",
-  desktop: "(min-width: 1280px) and (max-width: 2299px)",
+  largedesktop: "(min-width: 2500px)",
+  desktop: "(min-width: 1280px) and (max-width: 2499px)",
   largetab: "(min-width: 951px) and (max-width: 1279px)",
   tab: "(min-width: 793px) and (max-width: 950px)",
   largemobile: "(min-width: 421px) and (max-width: 792px)",

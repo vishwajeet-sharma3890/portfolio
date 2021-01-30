@@ -117,6 +117,14 @@ export const defaultTheme = {
   },
   banner: {
     profile: {
+      maxWidth: {
+        largedesktop: "1280px",
+        desktop: "900px",
+        largetab: "720px",
+        tab: "720px",
+        largemobile: "320px",
+        mobile: "320px",
+      },
       display: {
         largedesktop: "flex",
         desktop: "flex",
