@@ -70,8 +70,8 @@ export const MainPage: React.FC = () => {
       <ProjectSection />
       <QuoteSection />
       <Spacer size={`${sectionSpacer * 2}px`} type="horizontal" />
-      <ReviewSection />
-      <Spacer size={`${sectionSpacer * 2}px`} type="horizontal" />
+      {/*<ReviewSection />
+      <Spacer size={`${sectionSpacer * 2}px`} type="horizontal" />*/}
       <ContactSection />
       <footer>
         <ProfileIcons icons={icons} defaultColor={theme.colors.white} />
