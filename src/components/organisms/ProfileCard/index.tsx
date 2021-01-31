@@ -47,7 +47,6 @@ export const ProfileCard: React.FC = () => {
 
   // Media query
   const screenSize: ScreenSize = getScreenSize()
-  console.log(screenSize)
   let profilePictureSize = "255px"
   if (isMobileScreen(screenSize)) {
     profilePictureSize = "125px"
