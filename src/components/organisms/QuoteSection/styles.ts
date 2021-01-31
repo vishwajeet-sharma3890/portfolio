@@ -16,7 +16,7 @@ export const QuoteSectionTextWrapper = styled.div<{ screenSize: ScreenSize }>`
     align-items: center;
     font-family: ${props.theme.body.sections.quote.fontFamily};
     color: ${props.theme.body.sections.quote.color};
-    font-size: ${props.theme.body.sections.quote.fontSize};
+    font-size: ${props.theme.body.sections.quote.fontSize[props.screenSize]};
     font-weight: ${props.theme.body.sections.quote.fontWeight};
     line-height: 1.75;
   `}

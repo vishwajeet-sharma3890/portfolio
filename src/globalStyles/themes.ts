@@ -235,7 +235,7 @@ export const defaultTheme = {
   body: {
     description: {
       width: {
-        largedesktop: "70%",
+        largedesktop: "50%",
         desktop: "70%",
         largetab: "70%",
         tab: "70%",
@@ -243,7 +243,14 @@ export const defaultTheme = {
         mobile: "90%",
       },
       color: C.theme.fontColors.black,
-      fontSize: C.theme.fontSizes.subTitle,
+      fontSize: {
+        largedesktop: C.theme.fontSizes.title,
+        desktop: C.theme.fontSizes.subTitle,
+        largetab: C.theme.fontSizes.subTitle,
+        tab: C.theme.fontSizes.subTitle,
+        largemobile: C.theme.fontSizes.subTitle,
+        mobile: C.theme.fontSizes.subTitle,
+      },
       fontWeight: C.theme.fontWeights.regular,
     },
     sections: {
@@ -283,6 +290,7 @@ export const defaultTheme = {
         },
         background: {
           background: C.theme.backgroundColor.gradient1,
+          height: "90%",
           shadow: C.theme.shadows.shadow3,
         },
         company: {
@@ -342,10 +350,17 @@ export const defaultTheme = {
         background: C.theme.backgroundColor.darkoverlay,
         color: C.theme.fontColors.white,
         fontFamily: "'Roboto Mono', monospace",
-        fontSize: C.theme.fontSizes.heading,
+        fontSize: {
+          largedesktop: C.theme.fontSizes.superHeading,
+          desktop: C.theme.fontSizes.heading,
+          largetab: C.theme.fontSizes.heading,
+          tab: C.theme.fontSizes.heading,
+          largemobile: C.theme.fontSizes.heading,
+          mobile: C.theme.fontSizes.heading,
+        },
         fontWeight: C.theme.fontWeights.regular,
         height: {
-          largedesktop: "250px",
+          largedesktop: "520px",
           desktop: "250px",
           largetab: "250px",
           tab: "250px",
@@ -353,8 +368,8 @@ export const defaultTheme = {
           mobile: "auto",
         },
         width: {
-          largedesktop: "80%",
-          desktop: "80%",
+          largedesktop: "50%",
+          desktop: "60%",
           largetab: "80%",
           tab: "80%",
           largemobile: "70%",
@@ -410,7 +425,7 @@ export const defaultTheme = {
       tech: {
         background: C.theme.backgroundColor.overlay,
         height: {
-          largedesktop: "420px",
+          largedesktop: "560px",
           desktop: "420px",
           largetab: "420px",
           tab: "320px",
@@ -418,7 +433,7 @@ export const defaultTheme = {
           mobile: "100%",
         },
         width: {
-          largedesktop: "50%",
+          largedesktop: "30%",
           desktop: "50%",
           largetab: "80%",
           tab: "80%",

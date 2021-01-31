@@ -52,7 +52,33 @@ export const ProjectSection: React.FC = () => {
 
   // Media query
   const screenSize: ScreenSize = getScreenSize();
-  const isMobile = isMobileScreen(screenSize);
+
+  const getProjectSpacing = () => {
+    const screenSizeString = screenSize as string
+    switch (screenSizeString) {
+      case 'largedesktop': {
+        return "640px"
+      }
+      case 'desktop': {
+        return "350px"
+      }
+      case 'largetab': {
+        return "350px"
+      }
+      case 'tab': {
+        return "350px"
+      }
+      case 'largemobile': {
+        return "120px"
+      }
+      case 'mobile': {
+        return "120px"
+      }
+      default : {
+        return "350px"
+      }
+    }
+  }
 
   return (
     <S.ProjectSectionWrapper>
@@ -62,7 +88,7 @@ export const ProjectSection: React.FC = () => {
           return (
             <div key={`ProjectSectionWrapper${index}`}>
               <Project {...project} />
-              <Spacer size={isMobile ? '120px' : '350px'} type="horizontal" />
+              <Spacer size={getProjectSpacing()} type="horizontal" />
             </div>
           );
         })

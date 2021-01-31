@@ -5,7 +5,7 @@ export const ProfileDescriptionWrapper = styled.div<{ screenSize: ScreenSize }>`
   ${props => `
     
     color: ${props.theme.body.description.color};
-    font-size: ${props.theme.body.description.fontSize};
+    font-size: ${props.theme.body.description.fontSize[props.screenSize]};
     font-weight: ${props.theme.body.description.fontWeight};
     text-align: center;
     display: flex;

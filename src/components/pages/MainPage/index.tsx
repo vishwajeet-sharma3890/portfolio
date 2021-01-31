@@ -60,11 +60,13 @@ export const MainPage: React.FC = () => {
       </ProfileDescription>
       <Spacer size={`${sectionSpacer}px`} type="horizontal" />
       <S.DownloadButtonContainer>
-        <Button onClick={() => ''}>Download Resume</Button>
+        <a href={"https://drive.google.com/file/d/1O8cYB4jO7Fy3Tq7DpcxKUjLsJWdw6vyu/view?usp=sharing"} target="_blank">
+          <Button>Download Resume</Button>
+        </a>
       </S.DownloadButtonContainer>
       <Spacer size={`${sectionSpacer * 2}px`} type="horizontal" />
       <TechSection />
-      <Spacer size={`${sectionSpacer * 2}px`} type="horizontal" />
+      <Spacer size={`${sectionSpacer * 4}px`} type="horizontal" />
       <ProjectSection />
       <QuoteSection />
       <Spacer size={`${sectionSpacer * 2}px`} type="horizontal" />

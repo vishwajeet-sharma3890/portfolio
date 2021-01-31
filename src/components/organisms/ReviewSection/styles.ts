@@ -9,6 +9,7 @@ export const ReviewSectionWrapper = styled.div`
 export const ReviewSectionContentWrapper = styled.div`
   ${props => `
     position: relative;
+    overflow: hidden;
   `}
 `
 
