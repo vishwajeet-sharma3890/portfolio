@@ -31,7 +31,7 @@ const attributes: ProfileAttributeProps[] = [
 export const icons: IconButtonProps[] = [
   {
     icon: faGithub,
-    link: "https://github.com/buyceps-vishu",
+    link: "https://github.com/vishwajeet-sharma3890",
   },
   {
     icon: faFacebook,
